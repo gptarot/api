@@ -1,12 +1,12 @@
 import React from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import Random from '../pages/Random';
 import DefaultLayout from '../components/layouts/DefaultLayout';
 
 const Router: React.FC = (): JSX.Element => {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route
           path="/"
@@ -33,7 +33,7 @@ const Router: React.FC = (): JSX.Element => {
           }
         />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 

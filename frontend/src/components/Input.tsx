@@ -1,5 +1,5 @@
 import React from 'react';
-import { InputProps } from '../types';
+import { InputProps } from '@/types';
 
 const Input: React.FC<InputProps> = ({ id, onChange, value, label, type, error }): JSX.Element => {
   return (

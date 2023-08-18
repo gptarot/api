@@ -26,7 +26,7 @@ export interface Cards {
   futureCard: string;
 }
 
-export interface Child {
+export interface ReactChild {
   children: string | JSX.Element | JSX.Element[];
 }
 
