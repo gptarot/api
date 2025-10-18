@@ -1,4 +1,4 @@
-# GPTarot - A Tarot Reader And Numerology Website (Powered By AI)
+# GPTarot - A numerology and Tarot reader powered by AI
 
 <p align='center'>
 <img width=100 src='https://assets.coingecko.com/coins/images/17881/large/tarot-200px.png?1629704943'>
