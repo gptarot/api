@@ -1,14 +1,4 @@
-up:
-	docker compose up
+.PHONY: format
 
-down:
-	docker compose down
-
-build:
-	docker compose build
-
-restart:
-	docker compose down && docker compose up
-
-rt-build:
-	docker compose down && docker compose build && docker compose up
+format:
+	uv run ruff check --select I,F --fix . && uv run ruff format .

@@ -1,19 +1,26 @@
-# GPTarot - A Tarot Reader Website (Powered By GPT)
+# GPTarot - A Tarot Reader And Numerology Website (Powered By AI)
+
 <p align='center'>
 <img width=100 src='https://assets.coingecko.com/coins/images/17881/large/tarot-200px.png?1629704943'>
 </p>
 
-## Installation
-
-Requires python and node.
-
-1. ```cd backend```
-2. ```pip install -r requirements.txt```
-3. ```cd ../frontend && npm install```
-
 ## Development
 
-1. In the frontend directory: ```npm start```
-2. In a separate terminal, in the backend directory: ```python run.py```
-3. Go to [http://localhost:5000/](http://localhost:5000/)
+### API
 
+1. Install `uv`: https://docs.astral.sh/uv
+2. Change directory to `backend`.
+2. Setup `OPENAI_API_KEY` in `.env`.
+3. Install dependencies:
+
+    ```bash
+    uv sync --all-groups --all-extras
+    ```
+
+4. Start the server:
+
+    ```bash
+    uv run python3 src/gptarot/app.py
+    ```
+
+5. Open [http://localhost:8000/docs](http://localhost:8000/docs) and you can see the FastAPI documentation.

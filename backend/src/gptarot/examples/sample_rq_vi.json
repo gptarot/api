@@ -1,0 +1,17 @@
+{
+    "name": "Nguyễn Văn A",
+    "dob": "2003-05-25",
+    "question": "Người bạn hiện tại có đang lừa dối tôi hay không?",
+    "past_card": {
+        "name" : "Chariot" ,
+        "is_upright" : false
+    },
+    "present_card": {
+        "name" : "The Fool" ,
+        "is_upright" : true
+    },
+    "future_card": {
+        "name" : "The Magician" ,
+        "is_upright" : true
+    }
+}
