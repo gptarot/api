@@ -1,26 +1,26 @@
 {
-    "name": "John Doe",
-    "dob": "2000-01-01",
-    "question": "Will my current love last forever?",
-    "numerology_meaning": "The numerology meaning of John Doe is: 6",
-    "interpretations": [
-        {
-            "card_name": "Chariot (Reversed)",
-            "position": "past",
-            "orientation": "ureversed",
-            "meaning": "Past influence:..."
-        },
-        {
-            "card_name": "The Fool (Upright)",
-            "position": "present",
-            "orientation": "upright",
-            "meaning": "Present situation:..."
-        },
-        {
-            "card_name": "The Magician (Upright)",
-            "position": "future",
-            "orientation": "upright",
-            "meaning": "Future outlook:..."
-        }
-    ]
+  "name": "John Doe",
+  "dob": "2000-01-01",
+  "question": "Will my current love last forever?",
+  "numerology_meaning": "The numerology meaning of John Doe is: 6",
+  "interpretations": [
+    {
+      "card_name": "Chariot (Reversed)",
+      "position": "past",
+      "orientation": "ureversed",
+      "meaning": "Past influence:..."
+    },
+    {
+      "card_name": "The Fool (Upright)",
+      "position": "present",
+      "orientation": "upright",
+      "meaning": "Present situation:..."
+    },
+    {
+      "card_name": "The Magician (Upright)",
+      "position": "future",
+      "orientation": "upright",
+      "meaning": "Future outlook:..."
+    }
+  ]
 }

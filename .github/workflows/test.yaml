@@ -6,6 +6,7 @@ on:
 
 jobs:
   uv-pre-commit:
+    name: test - pre-commit
     runs-on: ubuntu-latest
     env:
       UV_CACHE_DIR: /tmp/.uv-cache
@@ -32,8 +33,11 @@ jobs:
       - name: Set up dependencies
         run: uv sync --all-groups --all-extras
 
+      - name: Run uv pre-commit install hooks
+        run: uv run pre-commit install --install-hooks
+
       - name: Run uv pre-commit to test
-        run: uv pre-commit run --all-files
+        run: uv run pre-commit run --all-files
 
       - name: Minimize uv cache
         run: uv cache prune --ci
