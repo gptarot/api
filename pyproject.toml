@@ -6,7 +6,8 @@ readme = "README.md"
 requires-python = ">=3.12,<3.13"
 dependencies = [
     "fastapi==0.119.0",
-    "openai==2.5.0",
+    "instructor==1.11.3",
+    "openai==1.109.1",
     "pydantic==2.12.3",
     "python-dotenv==1.1.1",
     "typing-extensions==4.15.0",
@@ -33,8 +34,10 @@ build-backend = "hatchling.build"
 
 [dependency-groups]
 dev = [
+    "gradio>=5.23.1",
     "pre-commit==4.3.0",
     "ruff==0.14.1",
+    "streamlit>=1.50.0",
 ]
 
 [tool.hatch.build.targets.wheel]

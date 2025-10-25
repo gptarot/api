@@ -9,5 +9,8 @@ docs: .install-uv
 docs-dev: .install-uv
 	uv run mkdocs serve --watch .
 
-dev: .install-uv
+api: .install-uv
 	uv run uvicorn src.gptarot.index:app --reload --reload-dir src
+
+ui: .install-uv
+	uv run streamlit run src/gptarot/inference.py

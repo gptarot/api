@@ -60,16 +60,9 @@ async def get_gptarot_cards_interpretations(
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": user_input},
                 ],
-                response_format={
-                    "type": "json_schema",
-                    "json_schema": {
-                        "name": "TarotLLMResponse",
-                        "schema": TarotLLMResponse.model_json_schema(),
-                    },
-                },
+                response_model=TarotLLMResponse,
             )
-            tarot_llm_parsed = json.loads(response.choices[0].message.content)
-            return TarotLLMResponse.model_validate(tarot_llm_parsed, strict=True)
+            return TarotLLMResponse.model_validate(response, strict=True)
         except Exception as e:
             logger.error(e)
             if model != model_lists[-1]:
@@ -116,19 +109,19 @@ async def get_gptarot_final_interpretations(
             card_name=past_card.name,
             position="past",
             orientation="upright" if past_card.is_upright else "reversed",
-            meaning=f"Past influence: {answer.past}",
+            meaning=answer.past,
         ),
         TarotInterpretation(
             card_name=present_card.name,
             position="present",
             orientation="upright" if present_card.is_upright else "reversed",
-            meaning=f"Present situation: {answer.present}",
+            meaning=answer.present,
         ),
         TarotInterpretation(
             card_name=future_card.name,
             position="future",
             orientation="upright" if future_card.is_upright else "reversed",
-            meaning=f"Future outlook: {answer.future}",
+            meaning=answer.future,
         ),
     ]
 

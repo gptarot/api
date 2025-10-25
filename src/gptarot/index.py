@@ -3,16 +3,14 @@ import os
 
 import uvicorn
 from fastapi import FastAPI, HTTPException
-from fastapi.staticfiles import StaticFiles
 
-from gptarot.functions import get_gptarot_final_interpretations, get_numerology_meansing
+from gptarot.functions import get_gptarot_final_interpretations, get_numerology_meaning
 from gptarot.models import TarotAPIRequest, TarotAPIResponse
 
 logger = logging.getLogger(__name__)
-
 site_dir = os.path.join(os.getcwd(), "site")
-app = FastAPI(docs_url=None, redoc_url=None)
-app.mount("/", StaticFiles(directory=site_dir, html=True), name="docs")
+app = FastAPI(docs_url="/swagger", redoc_url=None)
+# app.mount("/", StaticF/iles(directory=site_dir, html=True), name="docs")
 
 
 @app.post("/predict/interpretations", response_model=TarotAPIResponse)
@@ -29,7 +27,7 @@ async def predict_interpretations(request: TarotAPIRequest) -> TarotAPIResponse:
         TarotAPIResponse: The response object containing the name, dob, question, numerology_meaning, and interpretations.
 
     !!! note
-        This function uses the `get_gptarot_final_interpretations` and `get_numerology_meansing` functions to get the tarot interpretations and numerology meanings.
+        This function uses the `get_gptarot_final_interpretations` and `get_numerology_meaning` functions to get the tarot interpretations and numerology meanings.
 
     !!! example "Example Request"
 
@@ -92,7 +90,7 @@ async def predict_interpretations(request: TarotAPIRequest) -> TarotAPIResponse:
             present_card=request.present_card,
             future_card=request.future_card,
         )
-        numerology_meaning = await get_numerology_meansing(
+        numerology_meaning = await get_numerology_meaning(
             name=request.name,
             dob=request.dob,
             question=request.question,

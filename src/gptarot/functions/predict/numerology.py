@@ -6,7 +6,7 @@ from typing import Dict
 from fastapi import HTTPException
 from unidecode import unidecode
 
-from gptarot.llm import OPENAI_CLIENT
+from gptarot.llm import MODEL_LISTS, OPENAI_BASE_CLIENT
 
 logger = logging.getLogger(__name__)
 
@@ -36,7 +36,7 @@ def calculate_numerology(name: str, dob: str) -> Dict[str, int]:
     }
 
 
-async def get_numerology_meansing(name: str, dob: date, question: str) -> str:
+async def get_numerology_meaning(name: str, dob: date, question: str) -> str:
     """
     Get Numerology Meanings based on name and date of birth.
 
@@ -49,10 +49,6 @@ async def get_numerology_meansing(name: str, dob: date, question: str) -> str:
     """
     dob_str = dob.strftime("%Y-%m-%d")
     numerology = calculate_numerology(name, dob_str)
-    model_lists = [
-        "openai/gpt-oss-120b",
-        "openai/gpt-oss-20b",
-    ]
 
     system_prompt = """
     You are a numerology expert. You will be given a name, date of birth, and a question.
@@ -69,9 +65,9 @@ async def get_numerology_meansing(name: str, dob: date, question: str) -> str:
         }
     )
 
-    for model in model_lists:
+    for model in MODEL_LISTS:
         try:
-            response = await OPENAI_CLIENT.chat.completions.create(
+            response = await OPENAI_BASE_CLIENT.chat.completions.create(
                 model=model,
                 messages=[
                     {"role": "system", "content": system_prompt},
@@ -82,7 +78,7 @@ async def get_numerology_meansing(name: str, dob: date, question: str) -> str:
             return numerology_meaning
         except Exception as e:
             logger.error(e)
-            if model != model_lists[-1]:
+            if model != MODEL_LISTS[-1]:
                 logger.info("Switching to next model")
             continue
 
