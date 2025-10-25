@@ -1,0 +1,43 @@
+{
+  "name": "Five of Swords",
+  "number": "5",
+  "arcana": "Minor Arcana",
+  "suit": "Swords",
+  "img": "s05.jpg",
+  "fortune_telling": [
+    "Someone is stealing from you, financially or romantically",
+    "Be wary of friends who talk behind your back"
+  ],
+  "keywords": [
+    "selfishness",
+    "hostility",
+    "irrationality",
+    "self-preservation"
+  ],
+  "meanings": {
+    "light": [
+      "Acting in your own best interest",
+      "Choosing to stand up for yourself",
+      "Not backing down from disagreement and discord",
+      "Taking a stand",
+      "Refusing to go along with an unethical plan",
+      "Knowing when to bend the rules"
+    ],
+    "shadow": [
+      "Taking advantage of others",
+      "Intimidating others",
+      "Acting in an unethical manner",
+      "Picking fights",
+      "Using words to goad others into violence and irrationality",
+      "Ignoring rules you've agreed to abide by",
+      "Looking out for yourself while allowing harm to come to others",
+      "Gloating over victory"
+    ]
+  },
+  "Numerology": "5 (The Catalyst: instability, resistance, confrontation)",
+  "Questions to Ask": [
+    "How do I behave when I win? What does that say about me?",
+    "How can I do what's necessary without making others feel defeated?",
+    "What's the difference between selfish action and acting in my own best interest?"
+  ]
+}

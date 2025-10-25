@@ -1,0 +1,42 @@
+{
+  "name": "Eight of Wands",
+  "number": "8",
+  "arcana": "Minor Arcana",
+  "suit": "Wands",
+  "img": "w08.jpg",
+  "fortune_telling": [
+    "Watch for a surprising letter in the mail",
+    "Your whole world is about to be turned on its ear"
+  ],
+  "keywords": [
+    "speed",
+    "swiftness",
+    "responsiveness",
+    "change"
+  ],
+  "meanings": {
+    "light": [
+      "Taking swift action",
+      "Moving forward with a plan as quickly as possible",
+      "Energizing yourself",
+      "Adapting to sudden changes",
+      "Taking setbacks in stride",
+      "Embracing the idea that nothing stays the same forever",
+      "Reacting quickly and appropriately to unforeseen problems"
+    ],
+    "shadow": [
+      "Giving in to panic",
+      "Running in circles and screaming",
+      "Insisting things must always stay the same",
+      "Stirring the pot just to see what will happen",
+      "Rushing others",
+      "Refusing to re-evaluate a schedule or program, even when it's clearly no longer appropriate"
+    ]
+  },
+  "Numerology": "8 (The Action: movement, outer work, swiftness)",
+  "Questions to Ask": [
+    "How quickly to you adapt to change?",
+    "What would your response be to overwhelming, sudden change?",
+    "What changes are on your horizon? How well have you prepared for them?"
+  ]
+}

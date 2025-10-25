@@ -1,0 +1,45 @@
+{
+  "name": "Eight of Cups",
+  "number": "8",
+  "arcana": "Minor Arcana",
+  "suit": "Cups",
+  "img": "c08.jpg",
+  "fortune_telling": [
+    "Someone's \"stepping out\" on you, now or in the near future",
+    "Maybe it's time to quit talking about the problem and just move on"
+  ],
+  "keywords": [
+    "longing",
+    "dissatisfaction",
+    "quest",
+    "departure",
+    "withdrawal"
+  ],
+  "meanings": {
+    "light": [
+      "Wanting something better",
+      "Blazing your own trail",
+      "Realizing there must be more to life",
+      "Leaving an unhealthy situation behind",
+      "Starting your own business",
+      "Going on a retreat",
+      "Seeking the \"still, small voice\""
+    ],
+    "shadow": [
+      "Being implacable",
+      "Finding fault",
+      "Nitpicking",
+      "Refusing to settle down",
+      "Running away from problems or confrontations",
+      "Saying, \"It's my way or the highway!\"",
+      "Harping on past mistakes and disappointments",
+      "Threatening to quit as a strategy to get your way"
+    ]
+  },
+  "Numerology": "8 (The Action: movement, outer work, swiftness)",
+  "Questions to Ask": [
+    "What do I need to leave behind once and for all?",
+    "If I left in search of \"more,\" what would I be looking for, exactly?",
+    "How might a retreat enhance my perspective?"
+  ]
+}

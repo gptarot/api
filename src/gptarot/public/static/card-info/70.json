@@ -1,0 +1,42 @@
+{
+  "name": "Six of Pentacles",
+  "number": "6",
+  "arcana": "Minor Arcana",
+  "suit": "Pentacles",
+  "img": "p06.jpg",
+  "fortune_telling": [
+    "When you need help, ask for it",
+    "Remember, though: what you receive may be limited by what you've given to others in the past"
+  ],
+  "keywords": [
+    "charity",
+    "fairness",
+    "cooperation",
+    "sharing"
+  ],
+  "meanings": {
+    "light": [
+      "Giving time, money, or effort to a charity",
+      "Taking part in a group effort",
+      "Lending your resources to others without expecting anything in return",
+      "Making sure everyone is treated equally",
+      "Working together toward a common goal",
+      "Redistributing wealth, time, or attention",
+      "Tithing",
+      "Sharing credit for your success"
+    ],
+    "shadow": [
+      "Making a loan as a means of gaining control over someone",
+      "Using charitable acts to draw attention to yourself",
+      "Dividing work or resources unfairly",
+      "Failing to do your part in a group effort",
+      "Ignoring obligations and commitments"
+    ]
+  },
+  "Numerology": "6 (The Adjustment: cooperation, collaboration, interaction)",
+  "Questions to Ask": [
+    "How do I feel about charity? About giving it? About receiving it?",
+    "How can I know if I'm treating others fairly?",
+    "What could I give that no one else can?"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "Wheel of Fortune",
+  "number": "10",
+  "arcana": "Major Arcana",
+  "suit": "Trump",
+  "img": "m10.jpg",
+  "fortune_telling": [
+    "Some events are in the hands of heaven",
+    "You've lived through this before",
+    "What happened then?"
+  ],
+  "keywords": [
+    "luck",
+    "randomness",
+    "cycles",
+    "karma",
+    "fate",
+    "revolution"
+  ],
+  "meanings": {
+    "light": [
+      "Allowing events to unfold",
+      "Seeing the larger pattern in everyday events",
+      "Trusting your luck",
+      "Watching for cycles",
+      "Believing that \"what goes around, comes around\""
+    ],
+    "shadow": [
+      "Losing money gambling",
+      "Refusing to do your part to bring a plan to fruition",
+      "Taking a fatalistic approach to life",
+      "Fighting the natural course of events"
+    ]
+  },
+  "Archetype": "The Fates/Destiny",
+  "Hebrew Alphabet": "Koph/Palm/20",
+  "Numerology": "10 (finality, completion) and 10 = 1 + 0 = 1 (seed, opportunity)",
+  "Elemental": "Jupiter",
+  "Mythical/Spiritual": "The God in the Machine. Deus ex Machina. Clotho, Lachesis, and Atropos. Fortuna.",
+  "Questions to Ask": [
+    "How does this challenge fit into a larger pattern?",
+    "What role does luck play in my circumstances?",
+    "What can I control? How should I know when to relinquish control?"
+  ]
+}

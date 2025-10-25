@@ -1,0 +1,41 @@
+{
+  "name": "Nine of Cups",
+  "number": "9",
+  "arcana": "Minor Arcana",
+  "suit": "Cups",
+  "img": "c09.jpg",
+  "fortune_telling": [
+    "Whatever you want, you'll get it"
+  ],
+  "keywords": [
+    "satisfaction",
+    "sensuality",
+    "luxury",
+    "pleasure"
+  ],
+  "meanings": {
+    "light": [
+      "Being delighted with your own achievements",
+      "Recognizing your own talents and abilities",
+      "Reveling in the good things life has to offer",
+      "Indulging yourself",
+      "Relaxing and unwinding",
+      "Having everything you need in order to feel complete"
+    ],
+    "shadow": [
+      "Being smug",
+      "Satisfying yourself at the expense of others",
+      "Being selfish",
+      "Over-indulging",
+      "Avoiding work that needs to be done",
+      "Claiming achievements or skills you do not possess",
+      "Never being satisfied, no matter how much you have"
+    ]
+  },
+  "Numerology": "9 (The Completion: fullness, readiness, ripeness)",
+  "Questions to Ask": [
+    "What is true happiness?",
+    "If I could have anything, what would I have?",
+    "What is my attitude toward luxury? Do I deserve it?"
+  ]
+}

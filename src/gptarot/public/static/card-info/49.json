@@ -1,0 +1,45 @@
+{
+  "name": "Queen of Swords",
+  "number": "13",
+  "arcana": "Minor Arcana",
+  "suit": "Swords",
+  "img": "s13.jpg",
+  "fortune_telling": [
+    "This card represents a woman with an artistic, intellectual nature, likely born between September 12th and October 12th, who uses clever, positive communication to sway others to her point of view"
+  ],
+  "keywords": [
+    "grace",
+    "skill",
+    "wit",
+    "charm",
+    "aptitude"
+  ],
+  "meanings": {
+    "light": [
+      "Exercising tact or using diplomacy",
+      "Defusing a tense situation",
+      "Knowing what to say and how to say it",
+      "Making others feel comfortable and confident",
+      "Bringing out the best in everyone",
+      "Having a way with words",
+      "Telling jokes",
+      "Possessing a knack for music, math, art, or science"
+    ],
+    "shadow": [
+      "Knowing exactly what to say to destroy another person",
+      "Withholding critical information",
+      "Using a barbed tongue to upset others",
+      "Employing sarcasm",
+      "Mimicking others unkindly",
+      "Making light of the less fortunate",
+      "Being disrespectful",
+      "Failing to use the talent you've been given"
+    ]
+  },
+  "Elemental": "Water of Air.",
+  "Questions to Ask": [
+    "What do I have a knack for? How might my special gift prove useful now?",
+    "To what extent am I capable of saying what needs to be said?",
+    "What is the best possible way to say what I want to say?"
+  ]
+}

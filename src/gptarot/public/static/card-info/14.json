@@ -1,0 +1,45 @@
+{
+  "name": "Death",
+  "number": "13",
+  "arcana": "Major Arcana",
+  "suit": "Trump",
+  "img": "m13.jpg",
+  "fortune_telling": [
+    "A relationship or illness ends suddenly",
+    "Limit travel and risk-taking",
+    "General gloom and doom"
+  ],
+  "keywords": [
+    "ending",
+    "conclusion",
+    "transition",
+    "passage",
+    "departure"
+  ],
+  "meanings": {
+    "light": [
+      "Bringing an unpleasant phase of life to an end",
+      "Recognizing and celebrating the conclusion of something",
+      "Putting bad habits to rest",
+      "Becoming a new person",
+      "Leaving one person, place, or thing for another",
+      "Letting go"
+    ],
+    "shadow": [
+      "Obsessing on death and dying",
+      "Refusing to give up old habits or unhealthy relationships",
+      "Insisting that everything and everyone should stay the same forever",
+      "Failing to take good care of yourself"
+    ]
+  },
+  "Archetype": "Death",
+  "Hebrew Alphabet": "Nun/Fish/50",
+  "Numerology": "13 = 1 + 3 = 4 (stability, persistence)",
+  "Elemental": "Scorpio",
+  "Mythical/Spiritual": "Christ in the tomb. Hades. Hypnos. Thanatos. Stories of journeys into the underworld.",
+  "Questions to Ask": [
+    "What needs to end?",
+    "How might an ending actually be a blessing in this situation?",
+    "What's next?"
+  ]
+}

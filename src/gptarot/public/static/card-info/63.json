@@ -1,0 +1,37 @@
+{
+  "name": "Queen of Wands",
+  "number": "13",
+  "arcana": "Minor Arcana",
+  "suit": "Wands",
+  "img": "w13.jpg",
+  "fortune_telling": [
+    "This card represents a woman with an attractive, appealing personality, likely born between March 11th and April 20th, who wants to charm you into doing things her way"
+  ],
+  "keywords": [
+    "attention",
+    "attraction",
+    "unification",
+    "collaboration"
+  ],
+  "meanings": {
+    "light": [
+      "Paying close attention",
+      "Helping others focus on the issue at hand",
+      "Getting everyone to work together",
+      "Identifying common ground",
+      "Bringing people together, despite their differences",
+      "Using reverse psychology"
+    ],
+    "shadow": [
+      "Being distracted, or using your charms or skills to distract others from the goal",
+      "Calling attention to yourself with negative or unhealthy behaviors",
+      "Disrupting group activities as a means of feeding your own ego"
+    ]
+  },
+  "Elemental": "Water of Fire.",
+  "Questions to Ask": [
+    "How attentive am I?",
+    "How can I draw people's attention to what we have in common?",
+    "To what extent am I able to convince people to do what I want them to do?"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Ace of Cups",
+  "number": "1",
+  "arcana": "Minor Arcana",
+  "suit": "Cups",
+  "img": "c01.jpg",
+  "fortune_telling": [
+    "Romance is in the cards",
+    "A new relationship or marriage is just around the corner",
+    "Prayers are answered"
+  ],
+  "keywords": [
+    "intuition",
+    "spirituality",
+    "affection",
+    "motivation"
+  ],
+  "meanings": {
+    "light": [
+      "Trusting your feelings",
+      "Opening yourself to spirit",
+      "Accepting and returning affection",
+      "Getting in touch with what motivates you",
+      "Taking advantage of an opportunity to express love to others",
+      "Listening to the still, small voice"
+    ],
+    "shadow": [
+      "Hiding your feelings",
+      "Spurning an opportunity to love or be loved",
+      "Numbing yourself to spiritual yearnings",
+      "Rejecting the counsel of your heart",
+      "Becoming a puppet of your own emotions",
+      "Indulging in hysteria or obsession"
+    ]
+  },
+  "Numerology": "1 (The Origin: the starting point, the seed, opportunity)",
+  "Questions to Ask": [
+    "What am I feeling right now?",
+    "How would I go about opening myself to spiritual guidance?",
+    "What motivates me the most - pleasure or pain? Why?"
+  ]
+}

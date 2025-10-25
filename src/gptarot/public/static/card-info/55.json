@@ -1,0 +1,39 @@
+{
+  "name": "Five of Wands",
+  "number": "5",
+  "arcana": "Minor Arcana",
+  "suit": "Wands",
+  "img": "w05.jpg",
+  "fortune_telling": [
+    "Prepare for a fight with your best friend",
+    "Remember: once you let words loose, you can't take them back"
+  ],
+  "keywords": [
+    "confrontation",
+    "disruption",
+    "distinction",
+    "objection",
+    "strife"
+  ],
+  "meanings": {
+    "light": [
+      "Calmly expressing a dissenting opinion",
+      "Allowing someone to use his or her own methods to get a job done",
+      "Opening the floor for discussion or debate",
+      "Comparing progress made so far to standards set earlier"
+    ],
+    "shadow": [
+      "Berating others for their ridiculous opinions",
+      "Picking fights",
+      "Offering destructive criticism",
+      "Baiting people with barbed remarks",
+      "Disrupting progress with an endless stream of pointless objections"
+    ]
+  },
+  "Numerology": "5 (The Catalyst: instability, resistance, confrontation)",
+  "Questions to Ask": [
+    "To what extent is your current issue worth fighting for?",
+    "What alternatives are there to outright conflict?",
+    "What happens in a \"fair fight?\" How can you keep this fight fair?"
+  ]
+}

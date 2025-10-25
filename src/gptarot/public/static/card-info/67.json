@@ -1,0 +1,42 @@
+{
+  "name": "Three of Pentacles",
+  "number": "3",
+  "arcana": "Minor Arcana",
+  "suit": "Pentacles",
+  "img": "p03.jpg",
+  "fortune_telling": [
+    "A high-dollar contract is in your future",
+    "If you work hard, you'll succeed"
+  ],
+  "keywords": [
+    "expression",
+    "production",
+    "work",
+    "contribution"
+  ],
+  "meanings": {
+    "light": [
+      "Finishing a project",
+      "Setting and meeting standards",
+      "Performing according to specifications",
+      "Making something others value",
+      "Creating something new",
+      "Doing your part in a group project",
+      "Delivering exactly what others have asked for"
+    ],
+    "shadow": [
+      "Pandering to the tastes of others",
+      "Failing to deliver what you've promised",
+      "Not delivering your best work unless closely supervised",
+      "Ignoring or breaking agreements with those who have invested in you",
+      "Refusing to do your part",
+      "Failing to abide by a clearly-outlined agreement with yourself or others"
+    ]
+  },
+  "Numerology": "3 (The Result: expression, productivity, output)",
+  "Questions to Ask": [
+    "How can I get more done?",
+    "What's expected of me? How large a role do I play in controlling those expectations?",
+    "What's been agreed to? How well has that agreement been followed?"
+  ]
+}

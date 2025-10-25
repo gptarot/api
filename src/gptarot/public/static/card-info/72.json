@@ -1,0 +1,43 @@
+{
+  "name": "Eight of Pentacles",
+  "number": "8",
+  "arcana": "Minor Arcana",
+  "suit": "Pentacles",
+  "img": "p08.jpg",
+  "fortune_telling": [
+    "Stop over-analyzing, researching, and outlining",
+    "Buckle down and get the work done"
+  ],
+  "keywords": [
+    "effort",
+    "work diligence",
+    "skill"
+  ],
+  "meanings": {
+    "light": [
+      "Doing your best",
+      "Bringing enthusiasm and zeal to your work",
+      "Making an effort to be the best you can be",
+      "Finding the work that is right for you",
+      "Taking care of the small details",
+      "Becoming a finely skilled craftsperson",
+      "Building something with your hands",
+      "Making a handmade gift"
+    ],
+    "shadow": [
+      "Working yourself to death",
+      "Doing a half-hearted or sloppy job",
+      "Continuing in a job you hate",
+      "Buying thoughtless gifts",
+      "Producing work with shoddy craftsmanship",
+      "Rushing through your work",
+      "Rejecting opportunities to learn more about your craft"
+    ]
+  },
+  "Numerology": "8 (The Action: movement, outer work, swiftness)",
+  "Questions to Ask": [
+    "How long has it been since you were \"lost in your work?\"",
+    "How can you improve your level of dedication and focus?",
+    "What work do you do best? What about that work appeals to you?"
+  ]
+}

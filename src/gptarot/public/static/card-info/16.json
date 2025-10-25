@@ -1,0 +1,46 @@
+{
+  "name": "The Devil",
+  "number": "15",
+  "arcana": "Major Arcana",
+  "suit": "Trump",
+  "img": "m15.jpg",
+  "fortune_telling": [
+    "Adultery and unfaithfulness",
+    "A string of extremely bad luck is coming your way",
+    "Beware evil influences and wolves in sheep's clothing"
+  ],
+  "keywords": [
+    "shadow",
+    "materialism",
+    "bondage",
+    "delusion"
+  ],
+  "meanings": {
+    "light": [
+      "Appreciating the luxuries that life has to offer",
+      "Being comfortable in your own skin",
+      "Enjoying your sexuality",
+      "Splurging on an expensive personal item",
+      "Embracing the fact that everyone has a darker side",
+      "Dealing with unhealthy impulses in healthy ways"
+    ],
+    "shadow": [
+      "Putting excessive emphasis on appearances",
+      "Always wanting more",
+      "Valuing possessions more than people or relationships",
+      "Allowing base instincts to govern your life",
+      "Being selfish",
+      "Attributing your own dark impulses to outside forces or other people"
+    ]
+  },
+  "Archetype": "The Shadow, The Other",
+  "Hebrew Alphabet": "Ayin/Eye/70",
+  "Numerology": "15 = 1 + 5 = 6 (adjustment, collaboration)",
+  "Elemental": "Capricorn",
+  "Mythical/Spiritual": "The Biblical Satan, certainly. Fallen angels, including Lucifer. Bacchus and Pan. Tempters and serpents of every stripe.",
+  "Questions to Ask": [
+    "What enslaves me? How can I set myself free?",
+    "How can I re-evaluate the importance I assign to material things?",
+    "To what extent do my cravings define me?"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "name": "Nine of Wands",
+  "number": "9",
+  "arcana": "Minor Arcana",
+  "suit": "Wands",
+  "img": "w09.jpg",
+  "fortune_telling": [
+    "Don't relax yet; there's more to come",
+    "The test you're facing now is happening for one reason: to show you who your real friends are"
+  ],
+  "keywords": [
+    "toughness",
+    "persistence",
+    "stamina",
+    "loyalty",
+    "release"
+  ],
+  "meanings": {
+    "light": [
+      "Sticking with it for the duration",
+      "Fulfilling your promises and obligations",
+      "Bearing up under incredible duress",
+      "Dragging yourself across the finish line",
+      "Picking yourself up by your own bootstraps",
+      "Refusing to quit",
+      "Going as far as you can go and being satisfied with your performance"
+    ],
+    "shadow": [
+      "Making yourself a martyr",
+      "Abandoning your post",
+      "Giving up at the first sign of opposition",
+      "Being prevented from fulfilling an obligation",
+      "Failing to be dependable",
+      "Refusing to let something go that needs to be released",
+      "Beating a dead horse"
+    ]
+  },
+  "Numerology": "9 (The Completion: fullness, readiness, ripeness)",
+  "Questions to Ask": [
+    "How do you cope when things get really tough?",
+    "When you get low, what encourages you to go on?",
+    "At what point should you be able to let this situation go?"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Page of Cups",
+  "number": "11",
+  "arcana": "Minor Arcana",
+  "suit": "Cups",
+  "img": "c11.jpg",
+  "fortune_telling": [
+    "This card represents a young man or woman with a watery, dreamy demeanor, likely born a Libra, Scorpio, or Sagittarius, who wants to start a new relationship with you"
+  ],
+  "keywords": [
+    "enthusiasm",
+    "first impressions",
+    "romanticism",
+    "superficiality"
+  ],
+  "meanings": {
+    "light": [
+      "Showing your emotions freely",
+      "Throwing yourself into romance",
+      "Nursing a secret crush",
+      "Indulging in romantic fantasy",
+      "Starting a new relationship",
+      "Recalling your first love",
+      "Experiencing love for the first time",
+      "Converting to a new religion"
+    ],
+    "shadow": [
+      "Mistaking a crush for true love",
+      "Reading romantic intention into innocent action",
+      "Frantically trying to impress others",
+      "Indulging in overly-sweet sentimentality",
+      "Pretending to more romantic or spiritual experience than you possess"
+    ]
+  },
+  "Elemental": "Earth of Water.",
+  "Questions to Ask": [
+    "How worried are you that others will see you as foolish or inexperienced?",
+    "To what extent can you be honest about your lack of experience in love and faith?",
+    "How can you maintain enthusiasm over time?"
+  ]
+}

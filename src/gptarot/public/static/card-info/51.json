@@ -1,0 +1,44 @@
+{
+  "name": "Ace of Wands",
+  "number": "1",
+  "arcana": "Minor Arcana",
+  "suit": "Wands",
+  "img": "w01.jpg",
+  "fortune_telling": [
+    "Someone has the \"hots\" for you",
+    "A new job offer is coming your way",
+    "Walk softly, and carry a big stick"
+  ],
+  "keywords": [
+    "desire",
+    "inspiration",
+    "vision",
+    "creation",
+    "invention"
+  ],
+  "meanings": {
+    "light": [
+      "Being inspired",
+      "Identifying an important goal",
+      "Being given the opportunity to do whatever you want to do",
+      "Giving or receiving direction",
+      "Seeing a solution",
+      "Creating something new",
+      "Being aroused, sexually or creatively"
+    ],
+    "shadow": [
+      "Failing to take advantage of a great opportunity",
+      "Being ineffectual or lazy",
+      "Making an inadequate effort",
+      "Working toward a goal, but lacking the resources or initiative to achieve success",
+      "Setting inappropriate goals",
+      "Failing to take a stand"
+    ]
+  },
+  "Numerology": "1 (The Origin: the starting point, the seed, opportunity)",
+  "Questions to Ask": [
+    "What do I really want, more than anything else?",
+    "What happens if I let this opportunity pass me by?",
+    "How clearly have I defined my directions, values, and goals?"
+  ]
+}

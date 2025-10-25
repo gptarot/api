@@ -1,0 +1,41 @@
+{
+  "name": "Page of Swords",
+  "number": "11",
+  "arcana": "Minor Arcana",
+  "suit": "Swords",
+  "img": "s11.jpg",
+  "fortune_telling": [
+    "This card represents a young man or woman with an airy, intellectual demeanor, likely born a Capricorn, Aquarius, or Pisces, who wants to learn something new from you or have a discussion with you"
+  ],
+  "keywords": [
+    "student",
+    "apprentice",
+    "scholarship",
+    "information"
+  ],
+  "meanings": {
+    "light": [
+      "Pursuing a course of study",
+      "Asking good questions",
+      "Investing time in study and practice",
+      "Doing research",
+      "Making a habit of learning new things",
+      "Starting an investigation",
+      "Outlining what you need to know",
+      "Finding a mentor or teacher"
+    ],
+    "shadow": [
+      "Pretending to knowledge or sophistication you do not possess",
+      "Cheating on an exam",
+      "Feigning interest as a way of gaining favor",
+      "Considering only the evidence that supports conclusions you've already drawn",
+      "Rejecting the wise counsel of experienced teachers"
+    ]
+  },
+  "Elemental": "Earth of Air.",
+  "Questions to Ask": [
+    "How comfortable are you with revealing your own ignorance?",
+    "What are the marks of a good student?",
+    "To what extent are you open to new information?"
+  ]
+}

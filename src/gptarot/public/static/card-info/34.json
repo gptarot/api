@@ -1,0 +1,39 @@
+{
+  "name": "Knight of Cups",
+  "number": "12",
+  "arcana": "Minor Arcana",
+  "suit": "Cups",
+  "img": "c12.jpg",
+  "fortune_telling": [
+    "This card represents a man with an emotional, sensitive personality, likely born between October 13th and November 11th, who wants you to rally around his latest passionate cause"
+  ],
+  "keywords": [
+    "fervor",
+    "zeal",
+    "moodiness",
+    "illumination"
+  ],
+  "meanings": {
+    "light": [
+      "Being deeply committed to a cause",
+      "Giving in to strong emotions, from excitement to depression",
+      "Acting on intuition alone",
+      "Solving problems intuitively",
+      "Believing in and basing decisions on ideals instead of realities",
+      "Bringing intuition or passion to the table"
+    ],
+    "shadow": [
+      "Becoming a fanatic",
+      "Rejecting information that suggests your intuitions are misguided",
+      "Allowing your emotions to control you",
+      "Giving in to jealousy, confrontation, and peer pressure",
+      "Hiding or ignoring intuitive insights"
+    ]
+  },
+  "Elemental": "Air of Water.",
+  "Questions to Ask": [
+    "How prone to emotional extremes are you?",
+    "What's the difference in driving passion and blind zeal?",
+    "How can you inspire others without inciting a riot?"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "name": "The Magician",
+  "number": "1",
+  "arcana": "Major Arcana",
+  "suit": "Trump",
+  "img": "m01.jpg",
+  "fortune_telling": [
+    "A powerful man may play a role in your day",
+    "Your current situation must be seen as one element of a much larger plan"
+  ],
+  "keywords": [
+    "capability",
+    "empowerment",
+    "activity"
+  ],
+  "meanings": {
+    "light": [
+      "Taking appropriate action",
+      "Receiving guidance from a higher power",
+      "Becoming a channel of divine will",
+      "Expressing masculine energy in appropriate and constructive ways",
+      "Being yourself in every way"
+    ],
+    "shadow": [
+      "Inflating your own ego",
+      "Abusing talents",
+      "Manipulating or deceiving others",
+      "Being too aggressive",
+      "Using cheap illusions to dazzle others",
+      "Refusing to invest the time and effort needed to master your craft",
+      "Taking shortcuts"
+    ]
+  },
+  "Archetype": "The Ego/The Self",
+  "Hebrew Alphabet": "Beth/House/2",
+  "Numerology": "1 (origins, unity, seeds)",
+  "Elemental": "The Sun/Mercury",
+  "Mythical/Spiritual": "Thoth, the Egyptian god of wisdom, known to the Greeks as Hermes and to the Romans as Mercury. Christ working miracles. Brahma, the Creator.",
+  "Questions to Ask": [
+    "What am I empowered to do?",
+    "How might my abilities come into play?",
+    "To what extent am I making the most of my talents?"
+  ]
+}

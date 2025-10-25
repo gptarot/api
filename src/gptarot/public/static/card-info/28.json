@@ -1,0 +1,41 @@
+{
+  "name": "Six of Cups",
+  "number": "6",
+  "arcana": "Minor Arcana",
+  "suit": "Cups",
+  "img": "c06.jpg",
+  "fortune_telling": [
+    "A stingy spirit is strangling your enjoyment of life",
+    "Loosen up and think of others for once, why don't you?"
+  ],
+  "keywords": [
+    "charity",
+    "sharing",
+    "sacrifice",
+    "cooperation",
+    "fairness"
+  ],
+  "meanings": {
+    "light": [
+      "Donating your time and talents to others",
+      "Taking satisfaction in knowing how your efforts will aid others",
+      "Creating a \"win-win\" scenario",
+      "Giving even when you know repayment is not possible",
+      "Being motivated to do a good deed"
+    ],
+    "shadow": [
+      "Linking your sense of self-worth to the appraisals of others",
+      "Striving to appear more needy than you really are",
+      "Taking undeserved or unmerited charity",
+      "Bragging about your charitable efforts",
+      "Profiteering in times of distress",
+      "Refusing to share a burden"
+    ]
+  },
+  "Numerology": "6 (The Adjustment: cooperation, collaboration, interaction)",
+  "Questions to Ask": [
+    "What gifts do I possess? How freely do I give them?",
+    "How can I practice unconditional giving?",
+    "How would things change if I became a more charitable person?"
+  ]
+}

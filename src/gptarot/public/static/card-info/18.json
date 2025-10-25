@@ -1,0 +1,48 @@
+{
+  "name": "The Star",
+  "number": "17",
+  "arcana": "Major Arcana",
+  "suit": "Trump",
+  "img": "m17.jpg",
+  "fortune_telling": [
+    "Get an astrology chart drawn up",
+    "Someone is a little too starstruck",
+    "What's happening now has long been fore-ordained"
+  ],
+  "keywords": [
+    "hope",
+    "optimism",
+    "openness",
+    "certainty",
+    "faith",
+    "longing",
+    "truth"
+  ],
+  "meanings": {
+    "light": [
+      "Hoping for the best",
+      "Believing good things happen to good people",
+      "Seeing events in the best possible light",
+      "Adopting a generous spirit",
+      "Seeking guidance from above",
+      "Embracing possibility over probability"
+    ],
+    "shadow": [
+      "Denying unpleasant truths",
+      "Denying personal accountability and saying, \"Things just happen!\"",
+      "Ignoring signs and omens",
+      "Preferring illusion to reality",
+      "Spreading pessimism and stinginess of spirit"
+    ]
+  },
+  "Archetype": "The Heavenly Guide",
+  "Hebrew Alphabet": "Tzaddi/Fishhook/90 or, in some decks, He[as]/Window/5",
+  "Numerology": "17 = 1 + 7 = 8 (action, movement, swiftness)",
+  "Elemental": "Aquarius",
+  "Mythical/Spiritual": "The star that guided the Magi. Aphrodite. Venus. The Pleiades. Moses bringing forth water from the rock.",
+  "Questions to Ask": [
+    "What would my higher power direct me to do?",
+    "How can I be less self-conscious and guarded?",
+    "How can I better attune myself to the abundance of life's blessings?"
+  ]
+}

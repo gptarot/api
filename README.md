@@ -1,6 +1,6 @@
 # GPTarot - A numerology and Tarot reader powered by AI
 
-<p align='center'>
+<p style="text-align: center">
 <img width=100 src='https://assets.coingecko.com/coins/images/17881/large/tarot-200px.png?1629704943'>
 </p>
 
@@ -20,7 +20,7 @@
 4. Start the server:
 
     ```bash
-    uv run python3 src/gptarot/app.py
+    uv run src/gptarot/index.py
     ```
 
 5. Open [http://localhost:8000/docs](http://localhost:8000/docs) and you can see the FastAPI documentation.

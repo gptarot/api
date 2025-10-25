@@ -1,0 +1,38 @@
+{
+  "name": "Ten of Cups",
+  "number": "10",
+  "arcana": "Minor Arcana",
+  "suit": "Cups",
+  "img": "c10.jpg",
+  "fortune_telling": [
+    "Marriage and family are in the cards",
+    "Expect a friendship to blossom into a romance"
+  ],
+  "keywords": [
+    "joy",
+    "fulfillment",
+    "overwhelming emotion",
+    "giddiness"
+  ],
+  "meanings": {
+    "light": [
+      "Having more than you ever dreamed",
+      "Being deeply thankful for all you've been given",
+      "Recognizing the Hand of God in the gifts the Universe brings your way",
+      "Experiencing transcendent joy",
+      "Achieving domestic bliss"
+    ],
+    "shadow": [
+      "Comparing your achievements or relationships to unrealistic fantasy standards",
+      "Experiencing emotions so intense they blunt your ability to cope with reality",
+      "Feeling overwhelmed",
+      "Envying the achievements and happiness of others"
+    ]
+  },
+  "Numerology": "10 (The End: finality, completion, exhaustion)",
+  "Questions to Ask": [
+    "Who gets to define what \"joy\" consists of?",
+    "What course of action is available when you feel overwhelmed?",
+    "How might vows or promises play a role in achieving a greater level of joy in your life?"
+  ]
+}

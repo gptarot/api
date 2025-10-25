@@ -1,0 +1,66 @@
+# all commands by default will run on every commit
+default_install_hook_types: [commit-msg, pre-commit, post-commit]
+default_stages: [pre-commit]
+
+repos:
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: v3.29.1
+    hooks:
+      - id: commitizen
+      - id: commitizen-branch
+        stages:
+          - post-commit
+          - pre-push
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-toml
+      - id: check-yaml
+        exclude: ^\.gitlab-ci\.yml$
+      - id: check-json
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    # Ruff version.
+    rev: v0.12.4
+    hooks:
+      # Run the linter.
+      - id: ruff-check
+        args: [--fix, --exit-non-zero-on-fix, .]
+      # Run the formatter.
+      - id: ruff-format
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.7.1
+    hooks:
+      - id: mypy
+        language_version: python3
+
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    # uv version.
+    rev: 0.8.10
+    hooks:
+      # Update the uv lockfile
+      - id: uv-lock
+
+  - repo: local
+    hooks:
+      - id: compile-api-requirements
+        name: compile-api-requirements
+        entry: uv pip compile pyproject.toml -o requirements.txt
+        language: python
+        additional_dependencies: [pre-commit, pytest]
+        always_run: true
+        pass_filenames: false
+
+  - repo: local
+    hooks:
+      - id: compile-docs
+        name: compile-docs
+        entry: uv run mkdocs build
+        language: python
+        additional_dependencies: [pre-commit, pytest]
+        always_run: true
+        pass_filenames: false

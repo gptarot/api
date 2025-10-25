@@ -1,0 +1,39 @@
+{
+  "name": "Nine of Pentacles",
+  "number": "9",
+  "arcana": "Minor Arcana",
+  "suit": "Pentacles",
+  "img": "p09.jpg",
+  "fortune_telling": [
+    "Until you appreciate what you have, you won't have any luck getting more"
+  ],
+  "keywords": [
+    "training",
+    "discipline",
+    "confidence",
+    "enough"
+  ],
+  "meanings": {
+    "light": [
+      "Investing time in learning or teaching a difficult task",
+      "Restraining yourself from physical or financial extremes",
+      "Making sacrifices as a way of achieving larger goals",
+      "Breaking a complex task down into simple steps",
+      "Wanting what you have",
+      "Knowing the difference between needs and wants"
+    ],
+    "shadow": [
+      "Being assigned to a task without being trained to perform it",
+      "Pursuing a position for which you are not qualified",
+      "Disregarding requirements",
+      "Refusing to dedicate adequate time or attention when learning about something or someone new",
+      "Always craving more"
+    ]
+  },
+  "Numerology": "9 (The Completion: fullness, readiness, ripeness)",
+  "Questions to Ask": [
+    "If you could not have what you want, how would you make do?",
+    "Could you make a complex task easier by breaking it down into smaller steps?",
+    "How patient are you during the learning process? With yourself? With others?"
+  ]
+}

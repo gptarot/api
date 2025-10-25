@@ -1,0 +1,42 @@
+{
+  "name": "Ace of Swords",
+  "number": "1",
+  "arcana": "Minor Arcana",
+  "suit": "Swords",
+  "img": "s01.jpg",
+  "fortune_telling": [
+    "The time to make a choice is now",
+    "Stop wavering and do what you know is best"
+  ],
+  "keywords": [
+    "logic",
+    "objectivity",
+    "intellect",
+    "choice"
+  ],
+  "meanings": {
+    "light": [
+      "Making objective decisions",
+      "Applying logic",
+      "Reasoning your way out of a difficult situation",
+      "Solving puzzles",
+      "Thinking things through",
+      "Emphasizing the facts",
+      "Clearing your mind",
+      "Seeking clarity"
+    ],
+    "shadow": [
+      "Applying ruthless or twisted logic",
+      "Gloating over your own superior intellect",
+      "Using quick thinking to deceive or confuse others",
+      "Confusing snap judgments with quick thinking",
+      "Making decisions without thinking through consequences"
+    ]
+  },
+  "Numerology": "1 (The Origin: the starting point, the seed, opportunity)",
+  "Questions to Ask": [
+    "If I made my decision purely based on reason and logic, what would my decision be?",
+    "What do I think about my own problem-solving ability?",
+    "Who can supply me with the pure and simple facts?"
+  ]
+}

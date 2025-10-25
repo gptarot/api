@@ -1,0 +1,39 @@
+{
+  "name": "Seven of Cups",
+  "number": "7",
+  "arcana": "Minor Arcana",
+  "suit": "Cups",
+  "img": "c07.jpg",
+  "fortune_telling": [
+    "You're being fed a line",
+    "Rather than be dazzled by fancy words and promises, demand something real"
+  ],
+  "keywords": [
+    "imagination",
+    "dreams",
+    "illusions",
+    "goals"
+  ],
+  "meanings": {
+    "light": [
+      "Motivating yourself with images of future success",
+      "Using visualization to encourage progress",
+      "Taking an imaginative or creative approach to problem solving",
+      "Making dreams come true",
+      "Gleaning insight from personal visions"
+    ],
+    "shadow": [
+      "Obsessing on imaginary fears or uncertain consequences",
+      "Giving in to emotional or political terrorism",
+      "Spending more time dreaming than working",
+      "Failing to envision the possible repercussions of your choices",
+      "Being controlled by fear"
+    ]
+  },
+  "Numerology": "7 (The Motive: imagination, inner work, psychology)",
+  "Questions to Ask": [
+    "What do you want most? What do you fear most? How are these related?",
+    "How is your imagination working for you? Against you?",
+    "How might a clearer personal vision help you choose a single cup from the many available?"
+  ]
+}

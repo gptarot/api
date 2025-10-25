@@ -1,0 +1,44 @@
+{
+  "name": "The Sun",
+  "number": "19",
+  "arcana": "Major Arcana",
+  "suit": "Trump",
+  "img": "m19.jpg",
+  "fortune_telling": [
+    "Everything's coming up roses (or sunflowers, whatever the case may be)",
+    "Whatever's on your mind, go for it because you can't lose today"
+  ],
+  "keywords": [
+    "joy",
+    "brilliance",
+    "validation",
+    "attention",
+    "energy"
+  ],
+  "meanings": {
+    "light": [
+      "Seeing things clearly",
+      "Experiencing intense joy",
+      "Celebrating your own successes",
+      "Knowing you're good at what you do",
+      "Gaining recognition for your personal genius"
+    ],
+    "shadow": [
+      "Being dazzled by your own accomplishments",
+      "Becoming absorbed in your own self-image",
+      "Feeling rushed and distracted",
+      "Exerting yourself to the point of exhaustion",
+      "Overstating your abilities or misrepresenting your achievements"
+    ]
+  },
+  "Archetype": "The Holy Masculine",
+  "Hebrew Alphabet": "Resh/Head/200",
+  "Numerology": "19 = 1 + 9 = 10 (completion, exhaustion) 1 + 0 = 1 (starting point, opportunity)",
+  "Elemental": "The Sun",
+  "Mythical/Spiritual": "God the Father. Sun gods, including Ra, Apollo, and Helios. The moment of baptism. Claiming a new faith as your own.",
+  "Questions to Ask": [
+    "How can I take best advantage of the attention coming my way?",
+    "What are my highest spiritual goals?",
+    "How can I avoid being bedazzled by the energy swirling around me?"
+  ]
+}

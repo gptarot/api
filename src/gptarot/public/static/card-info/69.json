@@ -1,0 +1,42 @@
+{
+  "name": "Five of Pentacles",
+  "number": "5",
+  "arcana": "Minor Arcana",
+  "suit": "Pentacles",
+  "img": "p05.jpg",
+  "fortune_telling": [
+    "Finances are getting tighter",
+    "Prepare for a setback"
+  ],
+  "keywords": [
+    "poverty",
+    "destitution",
+    "need",
+    "crisis"
+  ],
+  "meanings": {
+    "light": [
+      "Recognizing your needs and taking action to fulfill them",
+      "Doing as much as you can do with what little you have",
+      "Admitting you need help",
+      "Embracing the aid that comes your way",
+      "Focusing on what you have versus what you don't",
+      "Looking for the light at the end of the tunnel"
+    ],
+    "shadow": [
+      "Exaggerating your financial or physical needs",
+      "Adopting a poverty mentality",
+      "Refusing to support yourself",
+      "Refusing offers of support",
+      "Playing the martyr",
+      "Turning down opportunities to improve your health or finances",
+      "Wallowing in misery"
+    ]
+  },
+  "Numerology": "5 (The Catalyst: instability, resistance, confrontation)",
+  "Questions to Ask": [
+    "What critical resources do I lack?",
+    "What people or groups would come to my aid if I asked?",
+    "How might an impoverished spirit be impacting my physical or financial condition?"
+  ]
+}

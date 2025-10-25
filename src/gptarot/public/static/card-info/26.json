@@ -1,0 +1,41 @@
+{
+  "name": "Four of Cups",
+  "number": "4",
+  "arcana": "Minor Arcana",
+  "suit": "Cups",
+  "img": "c04.jpg",
+  "fortune_telling": [
+    "A lover is getting restless",
+    "Find out what he or she needs, or new opportunities may lure your partner away"
+  ],
+  "keywords": [
+    "boredom",
+    "listlessness",
+    "lethargy",
+    "stability",
+    "ingratitude"
+  ],
+  "meanings": {
+    "light": [
+      "Maintaining your emotional stability",
+      "Refusing to give in to overwhelming emotions",
+      "Appreciating what you have and refusing to take it for granted",
+      "Seeing the value of long-term commitments"
+    ],
+    "shadow": [
+      "Being bored",
+      "Daydreaming at the expense of your work",
+      "Refusing to be engaged by opportunity",
+      "Taking people and relationships for granted",
+      "Ignoring romantic or spiritual opportunities",
+      "Spurning inspiration",
+      "Feeling everything should stay \"just like it is\""
+    ]
+  },
+  "Numerology": "4 (The Status Quo: stability, equality, persistence)",
+  "Questions to Ask": [
+    "How can I use this \"downtime\" to my best advantage?",
+    "How can I show my partner that I don't take him or her for granted?",
+    "To what extent is my mood blinding me to new opportunities?"
+  ]
+}

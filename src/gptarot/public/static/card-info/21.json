@@ -1,0 +1,46 @@
+{
+  "name": "Judgement",
+  "number": "20",
+  "arcana": "Major Arcana",
+  "suit": "Trump",
+  "img": "m20.jpg",
+  "fortune_telling": [
+    "An old issue you thought was over will come up again today",
+    "Get ready for huge changes: break-ups, sudden calls from old friends, and unexpected setbacks",
+    "God's trying to get your attention"
+  ],
+  "keywords": [
+    "revival",
+    "renewal",
+    "resurrection",
+    "evaluation",
+    "invitation"
+  ],
+  "meanings": {
+    "light": [
+      "Receiving a wake-up call",
+      "Discovering a new purpose in life",
+      "Becoming totally and completely yourself",
+      "Receiving a well-deserved reward",
+      "Passing an evaluation or examination",
+      "Welcoming the start of a new phase of life"
+    ],
+    "shadow": [
+      "Being weighed in the balances and found wanting",
+      "Failing to measure up to a well-defined standard",
+      "Being caught goofing off or misbehaving",
+      "Failing to prepare for an examination you know is coming",
+      "Rejecting an opportunity to reinvent yourself"
+    ]
+  },
+  "Archetype": "Resurrection",
+  "Hebrew Alphabet": "Sin/Tooth/300",
+  "Numerology": "20 = 2 + 0 = 2 (division, duality)",
+  "Elemental": "Fire",
+  "Mythical/Spiritual": "The resurrected Christ. The Last Judgment of Revelation. The phoenix, which rises to new life from its own ashes.",
+  "Questions to Ask": [
+    "What is the main thing I need to realize about myself?",
+    "In what way might the universe be trying to get my attention?",
+    "If I were to reinvent myself, what would I become?"
+  ]
+}

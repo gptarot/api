@@ -1,0 +1,41 @@
+{
+  "name": "Knight of Wands",
+  "number": "12",
+  "arcana": "Minor Arcana",
+  "suit": "Wands",
+  "img": "w12.jpg",
+  "fortune_telling": [
+    "This card represents a man with a bold, passionate personality, likely born between July 12th and August 11th, who wants to sweep you off your feet"
+  ],
+  "keywords": [
+    "boldness",
+    "bravado",
+    "passion",
+    "persuasion",
+    "advocacy"
+  ],
+  "meanings": {
+    "light": [
+      "Charging ahead",
+      "Making rapid progress",
+      "Refusing limits",
+      "Dazzling those around you with your wit and charm",
+      "Convincing others of your right to leadership",
+      "Convincing others to follow you",
+      "Being a catalyst for change"
+    ],
+    "shadow": [
+      "Blundering forward with inadequate skill or information",
+      "Running roughshod over the feelings of others",
+      "Using sex appeal to manipulate others",
+      "Forcing your leadership or ideology on others",
+      "Beginning many projects without finishing any"
+    ]
+  },
+  "Elemental": "Air of Fire.",
+  "Questions to Ask": [
+    "To what extent have you defined your ultimate goal?",
+    "What's the fastest way to get the job done? Is this necessarily the best way?",
+    "How long has it been since you looked back to see if others really are following your lead?"
+  ]
+}
