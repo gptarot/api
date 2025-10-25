@@ -63,8 +63,8 @@ plugins:
             show_signature: true
             signature_crossrefs: true
             extensions:
-            - griffe_pydantic:
-                schema: true
+              - griffe_pydantic:
+                  schema: true
   - search
   - minify:
       minify_html: true

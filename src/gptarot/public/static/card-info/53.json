@@ -8,11 +8,7 @@
     "You'll be planning a trip soon",
     "Be on the lookout: your ship is coming in"
   ],
-  "keywords": [
-    "implementation",
-    "action",
-    "exploration"
-  ],
+  "keywords": ["implementation", "action", "exploration"],
   "meanings": {
     "light": [
       "Putting a plan into motion",

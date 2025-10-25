@@ -4,16 +4,8 @@
   "arcana": "Minor Arcana",
   "suit": "Pentacles",
   "img": "p05.jpg",
-  "fortune_telling": [
-    "Finances are getting tighter",
-    "Prepare for a setback"
-  ],
-  "keywords": [
-    "poverty",
-    "destitution",
-    "need",
-    "crisis"
-  ],
+  "fortune_telling": ["Finances are getting tighter", "Prepare for a setback"],
+  "keywords": ["poverty", "destitution", "need", "crisis"],
   "meanings": {
     "light": [
       "Recognizing your needs and taking action to fulfill them",

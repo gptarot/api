@@ -4,15 +4,8 @@
   "arcana": "Minor Arcana",
   "suit": "Cups",
   "img": "c09.jpg",
-  "fortune_telling": [
-    "Whatever you want, you'll get it"
-  ],
-  "keywords": [
-    "satisfaction",
-    "sensuality",
-    "luxury",
-    "pleasure"
-  ],
+  "fortune_telling": ["Whatever you want, you'll get it"],
+  "keywords": ["satisfaction", "sensuality", "luxury", "pleasure"],
   "meanings": {
     "light": [
       "Being delighted with your own achievements",

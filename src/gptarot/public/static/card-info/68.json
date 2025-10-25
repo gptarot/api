@@ -4,15 +4,8 @@
   "arcana": "Minor Arcana",
   "suit": "Pentacles",
   "img": "p04.jpg",
-  "fortune_telling": [
-    "A rainy day is coming—it's time to save"
-  ],
-  "keywords": [
-    "protection",
-    "conservation",
-    "preservation",
-    "safety"
-  ],
+  "fortune_telling": ["A rainy day is coming—it's time to save"],
+  "keywords": ["protection", "conservation", "preservation", "safety"],
   "meanings": {
     "light": [
       "Saving for a rainy day",
