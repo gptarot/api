@@ -113,7 +113,7 @@ with col1:
 with col2:
     st.subheader("About Your Reading")
     st.markdown("""
-    🃏 **Three Card Spread**
+    **Three Card Spread**
     - **Past**: Influences that have shaped your situation
     - **Present**: Your current circumstances and energies
     - **Future**: Potential outcomes and guidance
@@ -126,23 +126,23 @@ if get_reading_btn:
     reading_data = get_tarot_reading(name, dob_str, question)
 
     if reading_data:
-        st.success("✅ Your reading is ready!")
+        st.success("Your reading is ready!")
         st.session_state["reading"] = reading_data
 
 if "reading" in st.session_state:
-    data = st.session_state["reading"]
+    data: dict = st.session_state["reading"]
 
     st.markdown("---")
-    st.header(f"🔮 Reading for {data['name']}")
+    st.header(f"🔮 Detailed reading for {data['name']}")
     st.caption(f"📅 {data['dob']} | 🔍 *{data['question']}*")
 
     if data.get("numerology_meaning"):
-        with st.expander("🔢 Numerology Insights", expanded=False):
+        with st.expander("Numerology Insights", expanded=True):
             st.write(data["numerology_meaning"])
 
-    st.markdown("### 🃏 Your Cards")
+    st.markdown("### Tarot Cards Deck")
 
-    positions = {"past": "⏮️ Past", "present": "▶️ Present", "future": "⏭️ Future"}
+    positions = {"past": "Past", "present": "Present", "future": " Future"}
     cols = st.columns(3)
 
     original_cards = data.get("original_cards", [{}, {}, {}])
@@ -154,5 +154,8 @@ if "reading" in st.session_state:
             card_data = original_cards[idx] if idx < len(original_cards) else {}
             display_card(card_data, interp)
 
+    st.markdown("---")
+    st.markdown(data["summary"])
+
 st.markdown("---")
-st.caption(f"💡 Ensure the API server at `{API_URL}` is running")
+st.caption(f"Ensure the API server at `{API_URL}` is running")

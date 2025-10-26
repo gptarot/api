@@ -1,6 +1,6 @@
 import json
 import logging
-from typing import List
+from typing import List, Tuple
 
 from fastapi import HTTPException
 
@@ -37,9 +37,17 @@ async def get_gptarot_cards_interpretations(
     ]
 
     system_prompt = """
-    You are a Tarot Reader. Return an object with 3 keys: "past", "present", "future".
-    Each key must contain deep answer in Markdown format that solve the question based on the cards they are holding.
-    The answer must be in the same language as the user's question.
+    # Role and Objective
+     You are a Tarot Reader. Begin with a concise checklist outlining your response process:
+        (1) analyze user's question and provided cards
+        (2) interpret and generate insights for 3 objects: "past", "present", "future"
+        (3) synthesize these into a final object: "summary"
+
+    # Instructions
+    * Respond with a object containing four keys, in this order: "past", "present", "future", and "summary".
+    * Each key should include a deep, thoughtful answer in Markdown format, addressing the user's question and interpreting the cards provided.
+    * Your response MUST be in the same language as the user's question. Don't include emojis in your response.
+    * Ensure your Markdown formatting is clear and has key-noted bold text where helpful to improve readability.
     """
 
     user_input = json.dumps(
@@ -78,7 +86,7 @@ async def get_gptarot_final_interpretations(
     past_card: TarotCard,
     present_card: TarotCard,
     future_card: TarotCard,
-) -> List[TarotInterpretation]:
+) -> Tuple[List[TarotInterpretation], str]:
     """
     Generate a tarot reading based on the input data.
 
@@ -91,6 +99,7 @@ async def get_gptarot_final_interpretations(
 
     Returns:
         List[TarotInterpretation]: A list of tarot interpretations.
+        str: Final summary of tarot reader.
     """
     past_card_str = past_card.full_card_name
     present_card_str = present_card.full_card_name
@@ -125,4 +134,4 @@ async def get_gptarot_final_interpretations(
         ),
     ]
 
-    return interpretations
+    return interpretations, answer.summary

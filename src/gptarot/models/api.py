@@ -35,6 +35,7 @@ class TarotAPIResponse(BaseModel):
     question: str
     numerology_meaning: str
     interpretations: List[TarotInterpretation]
+    summary: str
 
     @field_validator("dob")
     def validate_dob_format(cls, value: str) -> str:

@@ -98,22 +98,24 @@ async def predict_interpretations(request: TarotAPIRequest) -> TarotAPIResponse:
                     "orientation": "upright",
                     "meaning": "Future outlook:...",
                 },
-            ]
+            ],
+            summary: "..."
         }
         ```
     """
     try:
-        interpretations = await get_gptarot_final_interpretations(
+        numerology_meaning = await get_numerology_meaning(
+            name=request.name,
+            dob=request.dob,
+            question=request.question,
+        )
+
+        interpretations, summary = await get_gptarot_final_interpretations(
             name=request.name,
             question=request.question,
             past_card=request.past_card,
             present_card=request.present_card,
             future_card=request.future_card,
-        )
-        numerology_meaning = await get_numerology_meaning(
-            name=request.name,
-            dob=request.dob,
-            question=request.question,
         )
 
         return TarotAPIResponse(
@@ -122,6 +124,7 @@ async def predict_interpretations(request: TarotAPIRequest) -> TarotAPIResponse:
             question=request.question,
             numerology_meaning=numerology_meaning,
             interpretations=interpretations,
+            summary=summary,
         )
 
     except HTTPException:
