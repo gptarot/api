@@ -1,6 +1,5 @@
 import json
 import logging
-from datetime import date
 from typing import Dict
 
 from fastapi import HTTPException
@@ -36,7 +35,7 @@ def calculate_numerology(name: str, dob: str) -> Dict[str, int]:
     }
 
 
-async def get_numerology_meaning(name: str, dob: date, question: str) -> str:
+async def get_numerology_meaning(name: str, dob: str, question: str) -> str:
     """
     Get Numerology Meanings based on name and date of birth.
 
@@ -47,8 +46,7 @@ async def get_numerology_meaning(name: str, dob: date, question: str) -> str:
     Returns:
         str: Numerology Meanings.
     """
-    dob_str = dob.strftime("%Y-%m-%d")
-    numerology = calculate_numerology(name, dob_str)
+    numerology = calculate_numerology(name, dob)
 
     system_prompt = """
     You are a numerology expert. You will be given a name, date of birth, and a question.
@@ -59,7 +57,7 @@ async def get_numerology_meaning(name: str, dob: date, question: str) -> str:
     user_input = json.dumps(
         {
             "name": name,
-            "dob": dob_str,
+            "dob": dob,
             "question": question,
             "numerology": numerology,
         }

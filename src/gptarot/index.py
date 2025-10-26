@@ -1,24 +1,44 @@
 import logging
-import os
+from pathlib import Path
 
 import uvicorn
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import RedirectResponse
+from fastapi.staticfiles import StaticFiles
+from mkdocs import config
+from mkdocs.commands import build as mkdocs_build
 
-from gptarot.functions import get_gptarot_final_interpretations, get_numerology_meaning
-from gptarot.models import TarotAPIRequest, TarotAPIResponse
+from gptarot.functions import (
+    calculate_numerology,
+    get_gptarot_final_interpretations,
+    get_numerology_meaning,
+    get_shuffled_cards,
+)
+from gptarot.models import CardsAPIRequest, CardsAPIResponse, TarotAPIRequest, TarotAPIResponse
 
 logger = logging.getLogger(__name__)
-site_dir = os.path.join(os.getcwd(), "site")
+MKDOCS_SITE_DIR = Path(__file__).resolve().parents[2] / "site"
+CARD_IMAGES_DIR = Path(__file__).resolve().parents[2] / "public" / "images"
+
+mkdocs_conf = config.load_config(site_dir=MKDOCS_SITE_DIR.as_posix(), config_file="mkdocs.yaml")
+mkdocs_build.build(mkdocs_conf)
+
 app = FastAPI(docs_url="/swagger", redoc_url=None)
-# app.mount("/", StaticF/iles(directory=site_dir, html=True), name="docs")
+app.mount("/docs", StaticFiles(directory=MKDOCS_SITE_DIR, html=True), name="docs")
+app.mount("/tarot-cards/images", StaticFiles(directory=CARD_IMAGES_DIR), name="tarot-cards")
 
 
-@app.post("/predict/interpretations", response_model=TarotAPIResponse)
+@app.get("/", include_in_schema=False)
+async def redirect_to_docs():
+    return RedirectResponse(url="/docs")
+
+
+@app.post("/predict/interpretations", response_model=TarotAPIResponse, tags=["Predict API"])
 async def predict_interpretations(request: TarotAPIRequest) -> TarotAPIResponse:
     """
     | Method | Path                       | Description                                       |
     | ------ | -------------------------- | ------------------------------------------------- |
-    | POST   | `/predict/interpretations` | Get tarot interpretations and numerology meanings |
+    | `POST` | `/predict/interpretations` | Get tarot interpretations and numerology meanings |
 
     Params:
         request (TarotAPIRequest): The request object containing the name, dob, question, past_card, present_card, and future_card.
@@ -108,6 +128,63 @@ async def predict_interpretations(request: TarotAPIRequest) -> TarotAPIResponse:
         raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Internal Server Error: {str(e)}")
+
+
+@app.post("/tarot-cards/draw", response_model=CardsAPIResponse, tags=["Tarot Cards API"])
+async def draw_cards(request: CardsAPIRequest) -> CardsAPIResponse:
+    """
+    | Method | Path                       | Description                                       |
+    | ------ | -------------------------- | ------------------------------------------------- |
+    | `POST` | `/tarot-cards/draw`        | Get shuffled tarot cards                          |
+
+    Params:
+        request (CardsAPIRequest): The request object containing the name, dob, and count.
+
+    Returns:
+        CardsAPIResponse: The response object containing the cards.
+
+    !!! note
+        This function uses the `get_shuffled_cards` function to get the shuffled tarot cards.
+
+    !!! example "Example Request"
+
+        ```json
+        {
+            "name": "John Doe",
+            "dob": "2000-01-01",
+            "count": 5,
+            "follow_numerology": false
+        }
+        ```
+
+    !!! example "Example Response"
+
+        ```json
+        {
+            "cards": [
+                {
+                    "name": "Eight of Pentacles",
+                    "is_upright": false,
+                    "image_url": "/tarot-cards/images/72.jpg",
+                    "full_card_name": "Eight of Pentacles (REVERSED)"
+                },
+                {
+                    "name": "King of Cups",
+                    "is_upright": false,
+                    "image_url": "/tarot-cards/images/36.jpg",
+                    "full_card_name": "King of Cups (REVERSED)"
+                },
+                ...
+            ]
+        }
+        ```
+    """
+    if request.follow_numerology:
+        universe_number = calculate_numerology(request.name, request.dob)["personal_numerology"]
+    else:
+        universe_number = None
+    shuffled_cards = get_shuffled_cards(random_seed=universe_number, count=request.count)
+    return CardsAPIResponse(cards=shuffled_cards)
 
 
 if __name__ == "__main__":

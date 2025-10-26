@@ -1,5 +1,11 @@
 site_name: GPTarot - API Documentation
 site_description: API Documentation for GPTarot FastAPI Project
+repo_url: https://github.com/gptarot/gptarot.api/
+
+nav:
+  - Home: index.md
+  - Predict API: predict.md
+  - Tarot Cards API: tarot-cards.md
 
 theme:
   name: material
@@ -83,13 +89,3 @@ markdown_extensions:
       alternate_style: true
   - attr_list
   - md_in_html
-
-nav:
-  - Home: index.md
-  - Predict API: predict.md
-  - Tarot Cards API: tarot-cards.md
-
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/yourusername/yourproject

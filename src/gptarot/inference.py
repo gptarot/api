@@ -1,177 +1,158 @@
-import time
 from datetime import datetime
 
 import requests  # type: ignore
 import streamlit as st
 
-API_URL = "http://0.0.0.0:8000/predict/interpretations"
-TAROT_CARDS = [
-    "The Fool",
-    "The Magician",
-    "The High Priestess",
-    "The Empress",
-    "The Emperor",
-    "The Hierophant",
-    "The Lovers",
-    "The Chariot",
-    "Strength",
-    "The Hermit",
-    "Wheel of Fortune",
-    "Justice",
-    "The Hanged Man",
-    "Death",
-    "Temperance",
-    "The Devil",
-    "The Tower",
-    "The Star",
-    "The Moon",
-    "The Sun",
-    "Judgement",
-    "The World",
-]
+API_URL = "http://0.0.0.0:8000"
 
 
-ANSWER_SKELETON = """# 🔮 Tarot Reading for {name}
-
-**Date of Birth:** {dob}
-**Question:** *{question}*
-
----
-
-{numerology}
-
-# 🃏 Tarot Card Interpretations
-
-{interpretations}
-"""
-
-INTERPRETATION_TEMPLATE = """## {emoji} {position} - {card_name} ({orientation})
-
-{meaning}
-
-"""
-
-
-def format_response(data):
-    numerology = data.get("numerology_meaning", "")
-    interpretation_blocks = []
-
-    position_emoji = {"past": "⏮️", "present": "▶️", "future": "⏭️"}
-    for interp in data["interpretations"]:
-        block = INTERPRETATION_TEMPLATE.format(
-            emoji=position_emoji.get(interp["position"], "🔮"),
-            position=interp["position"].title(),
-            card_name=interp["card_name"],
-            orientation="↑ Upright" if interp["orientation"] == "upright" else "↓ Reversed",
-            meaning=interp["meaning"],
-        )
-        interpretation_blocks.append(block)
-
-    return ANSWER_SKELETON.format(
-        name=data["name"],
-        dob=data["dob"],
-        question=data["question"],
-        numerology=numerology + "\n---\n" if numerology else "",
-        interpretations="\n".join(interpretation_blocks),
-    )
-
-
-def get_tarot_reading(
-    name: str,
-    dob: datetime,
-    question: str,
-    past_card: str,
-    past_upright: bool,
-    present_card: str,
-    present_upright: bool,
-    future_card: str,
-    future_upright: bool,
-) -> str:
-    if not name or not dob or not question:
-        return "Please fill in all required fields (Name, Date of Birth, Question)"
-
-    payload = {
-        "name": name,
-        "dob": dob.strftime("%Y-%m-%d"),
-        "question": question,
-        "past_card": {"name": past_card, "is_upright": past_upright},
-        "present_card": {"name": present_card, "is_upright": present_upright},
-        "future_card": {"name": future_card, "is_upright": future_upright},
-    }
-
-    progress = st.progress(0)
-    messages = ["🔄 Preparing your request...", "🧠 Asking the oracle...", "✨ Reading received. Formatting..."]
-
-    for i, msg in enumerate(messages):
-        progress.progress(int((i + 1) / len(messages) * 100))
-        st.info(msg)
-        time.sleep(0.7)
-
+def draw_three_cards(name: str, dob: str):
+    """Draw 3 tarot cards from the API."""
+    payload = {"name": name, "dob": dob, "count": 3}
     try:
-        response = requests.post(
-            API_URL,
+        r = requests.post(
+            f"{API_URL}/tarot-cards/draw",
             headers={"accept": "application/json", "Content-Type": "application/json"},
             json=payload,
-            timeout=60,
+            timeout=30,
         )
-
-        if response.status_code == 200:
-            data = response.json()
-            progress.progress(100)
-            st.success("✅ Reading complete.")
-            return format_response(data)
+        if r.status_code == 200:
+            return r.json()["cards"]
         else:
-            return f"API Error: {response.status_code}\n\n{response.text}"
-
-    except requests.exceptions.ConnectionError:
-        return "Connection Error: Could not connect to API. Is the server running?"
-    except requests.exceptions.Timeout:
-        return "Timeout Error: The request took too long. Please try again."
-    except Exception as e:
-        return f"Error: {str(e)}"
+            st.error(f"Failed to draw cards: {r.status_code}")
+            return None
+    except requests.exceptions.RequestException as e:
+        st.error(f"Connection error: {e}")
+        return None
 
 
-# --- UI Layout ---
-st.set_page_config(page_title="🔮 GPTarot - AI Tarot Reader", layout="wide")
+def get_tarot_reading(name: str, dob: str, question: str):
+    """Get complete tarot reading with interpretations."""
+    if not all([name, dob, question]):
+        st.warning("⚠️ Please fill in all fields")
+        return None
+
+    with st.spinner("🔮 Drawing your cards..."):
+        cards = draw_three_cards(name, dob)
+        if not cards or len(cards) < 3:
+            st.error("Failed to draw cards")
+            return None
+
+    with st.spinner("✨ Interpreting your reading..."):
+        payload = {
+            "name": name,
+            "dob": dob,
+            "question": question,
+            "past_card": cards[0],
+            "present_card": cards[1],
+            "future_card": cards[2],
+        }
+
+        try:
+            r = requests.post(
+                f"{API_URL}/predict/interpretations",
+                headers={"accept": "application/json", "Content-Type": "application/json"},
+                json=payload,
+                timeout=60,
+            )
+            if r.status_code == 200:
+                result = r.json()
+                # Store the original cards with image_url
+                result["original_cards"] = cards
+                return result
+            else:
+                st.error(f"Interpretation failed: {r.status_code}")
+                return None
+        except requests.exceptions.RequestException as e:
+            st.error(f"Request failed: {e}")
+            return None
+
+
+def display_card(card_data: dict, interpretation: dict):
+    """Display a single tarot card with its interpretation."""
+    orientation = interpretation["orientation"]
+    is_reversed = orientation == "reversed"
+
+    if card_data.get("image_url"):
+        rotation_style = "transform: rotate(180deg);" if is_reversed else ""
+        st.markdown(
+            f"""
+            <div style="text-align: center;">
+                <img src="{API_URL}{card_data["image_url"]}"
+                     style="width: 200px; {rotation_style}"
+                     alt="{card_data["name"]}">
+                <p style="margin-top: 10px; font-size: 14px; color: #666;">
+                    {card_data["name"]} {"(Reversed)" if is_reversed else "(Upright)"}
+                </p>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+    else:
+        st.write(f"**{card_data['name']}** {'↓ Reversed' if is_reversed else '↑ Upright'}")
+
+    with st.expander("📖 Read Interpretation", expanded=True):
+        st.write(interpretation["meaning"])
+
+
+# --- UI Setup ---
+st.set_page_config(page_title="🔮 GPTarot Reader", layout="wide")
 
 st.title("🔮 GPTarot - AI Tarot Reader")
-st.write(
-    "Get personalized tarot readings powered by AI. Fill in your details and select three cards for past, present, and future."
-)
+st.markdown("*Discover insights through the ancient art of tarot, powered by AI*")
 
-with st.sidebar:
-    st.header("👤 Your Information")
-    name = st.text_input("Name", "John Doe")
-    dob = st.date_input("Date of Birth", format="YYYY-MM-DD", value=datetime(2000, 1, 1))
-    question = st.text_area("Your Question", "Will my current love last forever?")
+col1, col2 = st.columns([2, 3])
+with col1:
+    st.subheader("Your Information")
+    name = st.text_input("Name", placeholder="Enter your name")
+    dob = st.date_input("Date of Birth", value=datetime(2000, 1, 1), format="YYYY-MM-DD")
+    question = st.text_area("Your Question", placeholder="What guidance do you seek?", height=100)
 
-    st.header("🃏 Select Your Cards")
+    get_reading_btn = st.button("✨ Get Reading", type="primary", use_container_width=True)
 
-    st.subheader("⏮️ Past Card")
-    past_card = st.selectbox("Past Card", TAROT_CARDS, index=7)
-    past_upright = st.checkbox("Upright (Past)", value=False)
+with col2:
+    st.subheader("About Your Reading")
+    st.markdown("""
+    🃏 **Three Card Spread**
+    - **Past**: Influences that have shaped your situation
+    - **Present**: Your current circumstances and energies
+    - **Future**: Potential outcomes and guidance
 
-    st.subheader("▶️ Present Card")
-    present_card = st.selectbox("Present Card", TAROT_CARDS, index=0)
-    present_upright = st.checkbox("Upright (Present)", value=True)
+    💫 Your reading includes personalized numerology insights based on your birth date.
+    """)
 
-    st.subheader("⏭️ Future Card")
-    future_card = st.selectbox("Future Card", TAROT_CARDS, index=1)
-    future_upright = st.checkbox("Upright (Future)", value=True)
+if get_reading_btn:
+    dob_str = dob.strftime("%Y-%m-%d")
+    reading_data = get_tarot_reading(name, dob_str, question)
 
-    if st.button("✨ Get Reading"):
-        with st.spinner("Summoning the spirits..."):
-            result = get_tarot_reading(
-                name, dob, question, past_card, past_upright, present_card, present_upright, future_card, future_upright
-            )
-            st.session_state["reading_result"] = result
+    if reading_data:
+        st.success("✅ Your reading is ready!")
+        st.session_state["reading"] = reading_data
 
-# --- Output display ---
-st.header("📖 Your Reading")
-if "reading_result" in st.session_state:
-    st.markdown(st.session_state["reading_result"], unsafe_allow_html=True)
-else:
-    st.markdown("*Your tarot reading will appear here...*")
+if "reading" in st.session_state:
+    data = st.session_state["reading"]
+
+    st.markdown("---")
+    st.header(f"🔮 Reading for {data['name']}")
+    st.caption(f"📅 {data['dob']} | 🔍 *{data['question']}*")
+
+    if data.get("numerology_meaning"):
+        with st.expander("🔢 Numerology Insights", expanded=False):
+            st.write(data["numerology_meaning"])
+
+    st.markdown("### 🃏 Your Cards")
+
+    positions = {"past": "⏮️ Past", "present": "▶️ Present", "future": "⏭️ Future"}
+    cols = st.columns(3)
+
+    original_cards = data.get("original_cards", [{}, {}, {}])
+
+    for idx, interp in enumerate(data["interpretations"]):
+        with cols[idx]:
+            position = interp["position"]
+            st.markdown(f"### {positions.get(position, position.title())}")
+            card_data = original_cards[idx] if idx < len(original_cards) else {}
+            display_card(card_data, interp)
 
 st.markdown("---")
-st.info("💡 Tip: Make sure your API server is running on `http://127.0.0.1:8000` before submitting.")
+st.caption(f"💡 Ensure the API server at `{API_URL}` is running")
