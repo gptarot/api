@@ -1,16 +1,17 @@
 .PHONY: docs
 
 .install-uv:
-	uv sync --all-groups --all-extras && source .venv/bin/activate
+	@find . -type f \( -name "*.pyc" -o -name "*.pyo" \) -delete
+	@uv sync --all-groups --all-extras && source .venv/bin/activate
 
 docs: .install-uv
-	uv run mkdocs build
+	@uv run mkdocs build
 
 docs-dev: .install-uv
-	uv run mkdocs serve --watch .
+	@uv run mkdocs serve --watch .
 
 api: .install-uv
-	uv run uvicorn src.gptarot.index:app --reload --reload-dir src
+	@uv run uvicorn src.gptarot.index:app --reload --reload-dir src
 
 ui: .install-uv
-	uv run streamlit run src/gptarot/inference.py
+	@uv run streamlit run src/gptarot/inference.py

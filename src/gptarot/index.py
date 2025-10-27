@@ -8,22 +8,20 @@ from fastapi.staticfiles import StaticFiles
 from mkdocs import config
 from mkdocs.commands import build as mkdocs_build
 
-from gptarot.functions import (
-    calculate_numerology,
-    get_gptarot_final_interpretations,
-    get_numerology_meaning,
-    get_shuffled_cards,
-)
+from gptarot import __title__, __version__
 from gptarot.models import CardsAPIRequest, CardsAPIResponse, TarotAPIRequest, TarotAPIResponse
+from gptarot.modules import NumerologyReader, TarotDeck, TarotReader
 
 logger = logging.getLogger(__name__)
 MKDOCS_SITE_DIR = Path(__file__).resolve().parents[2] / "site"
 CARD_IMAGES_DIR = Path(__file__).resolve().parents[2] / "public" / "images"
+NUMEROLOGY_READER = NumerologyReader()
+TAROT_READER = TarotReader()
 
 mkdocs_conf = config.load_config(site_dir=MKDOCS_SITE_DIR.as_posix(), config_file="mkdocs.yaml")
 mkdocs_build.build(mkdocs_conf)
 
-app = FastAPI(docs_url="/swagger", redoc_url=None)
+app = FastAPI(title=__title__, version=__version__, docs_url="/swagger", redoc_url=None)
 app.mount("/docs", StaticFiles(directory=MKDOCS_SITE_DIR, html=True), name="docs")
 app.mount("/tarot-cards/images", StaticFiles(directory=CARD_IMAGES_DIR), name="tarot-cards")
 
@@ -104,13 +102,13 @@ async def predict_interpretations(request: TarotAPIRequest) -> TarotAPIResponse:
         ```
     """
     try:
-        numerology_meaning = await get_numerology_meaning(
+        numerology_meaning = await NUMEROLOGY_READER.analyze(
             name=request.name,
             dob=request.dob,
             question=request.question,
         )
 
-        interpretations, summary = await get_gptarot_final_interpretations(
+        interpretations, summary = await TAROT_READER.generate_reading(
             name=request.name,
             question=request.question,
             past_card=request.past_card,
@@ -183,10 +181,12 @@ async def draw_cards(request: CardsAPIRequest) -> CardsAPIResponse:
         ```
     """
     if request.follow_numerology:
-        universe_number = calculate_numerology(request.name, request.dob)["personal_numerology"]
+        universe_number = NUMEROLOGY_READER.calculate(request.name, request.dob)["personal_numerology"]
     else:
         universe_number = None
-    shuffled_cards = get_shuffled_cards(random_seed=universe_number, count=request.count)
+
+    tarot_deck = TarotDeck(seed=universe_number)
+    shuffled_cards = tarot_deck.draw(count=request.count)
     return CardsAPIResponse(cards=shuffled_cards)
 
 
