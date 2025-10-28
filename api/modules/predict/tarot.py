@@ -1,5 +1,6 @@
 import json
 import logging
+from datetime import datetime
 from typing import Any, List, Optional, Tuple
 
 import instructor
@@ -55,6 +56,7 @@ class TarotReader:
                 "past_card_name": past_card_name,
                 "present_card_name": present_card_name,
                 "future_card_name": future_card_name,
+                "current_year": datetime.now().year,
             }
         )
 

@@ -33,12 +33,12 @@
       "Rejecting an opportunity to reinvent yourself"
     ]
   },
-  "Archetype": "Resurrection",
-  "Hebrew Alphabet": "Sin/Tooth/300",
-  "Numerology": "20 = 2 + 0 = 2 (division, duality)",
-  "Elemental": "Fire",
-  "Mythical/Spiritual": "The resurrected Christ. The Last Judgment of Revelation. The phoenix, which rises to new life from its own ashes.",
-  "Questions to Ask": [
+  "archetype": "Resurrection",
+  "hebrew_alphabet": "Sin/Tooth/300",
+  "numerology": "20 = 2 + 0 = 2 (division, duality)",
+  "elemental": "Fire",
+  "mythical_spiritual": "The resurrected Christ. The Last Judgment of Revelation. The phoenix, which rises to new life from its own ashes.",
+  "questions_to_ask": [
     "What is the main thing I need to realize about myself?",
     "In what way might the universe be trying to get my attention?",
     "If I were to reinvent myself, what would I become?"

@@ -26,12 +26,12 @@
       "Failing to take good care of yourself"
     ]
   },
-  "Archetype": "Death",
-  "Hebrew Alphabet": "Nun/Fish/50",
-  "Numerology": "13 = 1 + 3 = 4 (stability, persistence)",
-  "Elemental": "Scorpio",
-  "Mythical/Spiritual": "Christ in the tomb. Hades. Hypnos. Thanatos. Stories of journeys into the underworld.",
-  "Questions to Ask": [
+  "archetype": "Death",
+  "hebrew_alphabet": "Nun/Fish/50",
+  "numerology": "13 = 1 + 3 = 4 (stability, persistence)",
+  "elemental": "Scorpio",
+  "mythical_spiritual": "Christ in the tomb. Hades. Hypnos. Thanatos. Stories of journeys into the underworld.",
+  "questions_to_ask": [
     "What needs to end?",
     "How might an ending actually be a blessing in this situation?",
     "What's next?"

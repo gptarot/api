@@ -1,3 +1,3 @@
-from .draw_cards import TarotDeck
+from .deck import TarotDeck
 
 __all__ = ["TarotDeck"]

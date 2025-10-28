@@ -15,8 +15,8 @@ jobs:
 
       - name: Configure Git Credentials
         run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git config --global user.name github-actions[bot]
+          git config --global user.email 41898282+github-actions[bot]@users.noreply.github.com
 
       - uses: actions/setup-python@v5
         with:
@@ -24,8 +24,13 @@ jobs:
 
       - run: curl -LsSf https://astral.sh/uv/install.sh | sh
       - run: uv sync --all-groups --all-extras
-
+      - run: uv run mkdocs build --clean --site-dir site
       - name: Deploy docs to tarotpedia/docs
         run: |
-          git remote add deploy "https://${{ secrets.DOCS_DEPLOY_USER }}:${{ secrets.DOCS_DEPLOY_TOKEN }}@github.com/tarotpedia/docs.git"
-          uv run mkdocs gh-deploy --force --remote-name deploy
+          git clone "https://${{ secrets.DOCS_DEPLOY_USER }}:${{ secrets.DOCS_DEPLOY_TOKEN }}@github.com/tarotpedia/docs.git" --depth 1 /tmp/deploy-docs
+          find /tmp/deploy-docs -mindepth 1 -maxdepth 1 -not -name 'README.md' -not -name '.git' -exec rm -rf '{}' +
+          cp -rf site/* /tmp/deploy-docs/
+          cd /tmp/deploy-docs
+          git add --all
+          git commit -m "docs: update api docs by commit ${{ github.sha }}"
+          git push origin main

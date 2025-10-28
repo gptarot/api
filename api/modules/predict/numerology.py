@@ -1,5 +1,6 @@
 import json
 import logging
+from datetime import datetime
 from typing import Any, Dict, Optional
 
 import openai
@@ -13,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 
 class NumerologyReader:
-    """Numerology computation and interpretation service."""
+    """numerology computation and interpretation service."""
 
     models: list[str] = MODEL_LISTS
     client: openai.AsyncOpenAI = OPENAI_BASE_CLIENT
@@ -35,19 +36,41 @@ class NumerologyReader:
             cls.max_analysis_length = max_analysis_length
 
     @staticmethod
-    def calculate(name: str, dob: str) -> Dict[str, int]:
-        """Calculate numerological values from name and date of birth."""
+    def calculate(name: str, dob: str) -> Dict[str, Any]:
+        """Calculate numerological values from name and date of birth with explanation."""
         normalized_name = unidecode(name.upper().replace(" ", ""))
-        name_sum = sum((ord(c) - 64) for c in normalized_name if c.isalpha())
+
+        letters = [(c, ord(c) - 64) for c in normalized_name if c.isalpha()]
+        name_sum = sum(v for _, v in letters)
+        name_expl = " + ".join(f"{c}({v})" for c, v in letters) + f" = {name_sum}"
+
         dob_digits = [int(ch) for ch in dob if ch.isdigit()]
         dob_sum = sum(dob_digits)
+        dob_expl = " + ".join(str(d) for d in dob_digits) + f" = {dob_sum}"
+
         total_sum = name_sum + dob_sum
+        reduction_steps = [str(total_sum)]
         while total_sum > 9:
             total_sum = sum(int(d) for d in str(total_sum))
+            reduction_steps.append(str(total_sum))
+        personal_expl = " → ".join(reduction_steps)
+
+        current_year = datetime.now().year
+        current_year_digits = [int(ch) for ch in str(current_year) if ch.isdigit()]
+        current_year_sum = sum(current_year_digits)
+        current_year_expl = " + ".join(str(d) for d in current_year_digits) + f" = {current_year_sum}"
+
         return {
             "name_numerology": name_sum,
             "dob_numerology": dob_sum,
             "personal_numerology": total_sum,
+            "current_year_numerology": current_year_sum,
+            "_explanation": {
+                "name": f"{name_expl}",
+                "dob": f"{dob_expl}",
+                "personal": f"{personal_expl}",
+                "current_year": f"{current_year_expl}",
+            },
         }
 
     @classmethod
@@ -66,8 +89,10 @@ class NumerologyReader:
                 "name": name,
                 "dob": dob,
                 "question": question,
+                "current_year": datetime.now().year,
                 "numerology": numerology,
-            }
+            },
+            indent=4,
         )
 
         system_prompt = cls._build_prompt()

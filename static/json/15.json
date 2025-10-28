@@ -28,12 +28,12 @@
       "Breaking alliances"
     ]
   },
-  "Archetype": "The Mediator",
-  "Hebrew Alphabet": "Samekh/Foundation/60",
-  "Numerology": "14 = 1 + 4 = 5 (catalyst, instability, confrontation)",
-  "Elemental": "Sagittarius",
-  "Mythical/Spiritual": "The angel seen here may be the goddess Iris. By extension, priests, priesthoods, or the transfigured Christ.",
-  "Questions to Ask": [
+  "archetype": "The Mediator",
+  "hebrew_alphabet": "Samekh/Foundation/60",
+  "numerology": "14 = 1 + 4 = 5 (catalyst, instability, confrontation)",
+  "elemental": "Sagittarius",
+  "mythical_spiritual": "The angel seen here may be the goddess Iris. By extension, priests, priesthoods, or the transfigured Christ.",
+  "questions_to_ask": [
     "How can I avoid extremes?",
     "What does everyone involved have in common?",
     "How might combining familiar things help me create something new?"

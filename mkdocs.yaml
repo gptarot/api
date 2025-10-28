@@ -1,7 +1,7 @@
-site_name: GPTarot - API Documentation
-site_description: API Documentation for GPTarot FastAPI Project
+site_name: Tarotpedia - API Documentation
+site_description: API Documentation for Tarotpedia FastAPI Project
 docs_dir: docs
-repo_url: https://github.com/gptarot/gptarot.api/
+repo_url: https://github.com/tarotpedia/tarotpedia.api/
 
 nav:
   - Home: index.md

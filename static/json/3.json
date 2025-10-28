@@ -29,12 +29,12 @@
       "Refusing to become involved, even when involvement is appropriate"
     ]
   },
-  "Archetype": "The Virgin/The Maiden",
-  "Hebrew Alphabet": "Gimel/Camel/3",
-  "Numerology": "2 (division, debate, duality)",
-  "Elemental": "The Moon",
-  "Mythical/Spiritual": "The feminine aspect of divinity, particularity when expressed through virginity, as with the Virgin Mary or Isis.",
-  "Questions to Ask": [
+  "archetype": "The Virgin/The Maiden",
+  "hebrew_alphabet": "Gimel/Camel/3",
+  "numerology": "2 (division, debate, duality)",
+  "elemental": "The Moon",
+  "mythical_spiritual": "The feminine aspect of divinity, particularity when expressed through virginity, as with the Virgin Mary or Isis.",
+  "questions_to_ask": [
     "What might a rebel against tradition do?",
     "What isn't being said or revealed?",
     "What could be achieved by observing and reflecting?"

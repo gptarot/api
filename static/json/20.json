@@ -25,12 +25,12 @@
       "Overstating your abilities or misrepresenting your achievements"
     ]
   },
-  "Archetype": "The Holy Masculine",
-  "Hebrew Alphabet": "Resh/Head/200",
-  "Numerology": "19 = 1 + 9 = 10 (completion, exhaustion) 1 + 0 = 1 (starting point, opportunity)",
-  "Elemental": "The Sun",
-  "Mythical/Spiritual": "God the Father. Sun gods, including Ra, Apollo, and Helios. The moment of baptism. Claiming a new faith as your own.",
-  "Questions to Ask": [
+  "archetype": "The Holy Masculine",
+  "hebrew_alphabet": "Resh/Head/200",
+  "numerology": "19 = 1 + 9 = 10 (completion, exhaustion) 1 + 0 = 1 (starting point, opportunity)",
+  "elemental": "The Sun",
+  "mythical_spiritual": "God the Father. Sun gods, including Ra, Apollo, and Helios. The moment of baptism. Claiming a new faith as your own.",
+  "questions_to_ask": [
     "How can I take best advantage of the attention coming my way?",
     "What are my highest spiritual goals?",
     "How can I avoid being bedazzled by the energy swirling around me?"

@@ -27,12 +27,12 @@
       "Taking shortcuts"
     ]
   },
-  "Archetype": "The Ego/The Self",
-  "Hebrew Alphabet": "Beth/House/2",
-  "Numerology": "1 (origins, unity, seeds)",
-  "Elemental": "The Sun/Mercury",
-  "Mythical/Spiritual": "Thoth, the Egyptian god of wisdom, known to the Greeks as Hermes and to the Romans as Mercury. Christ working miracles. Brahma, the Creator.",
-  "Questions to Ask": [
+  "archetype": "The Ego/The Self",
+  "hebrew_alphabet": "Beth/House/2",
+  "numerology": "1 (origins, unity, seeds)",
+  "elemental": "The Sun/Mercury",
+  "mythical_spiritual": "Thoth, the Egyptian god of wisdom, known to the Greeks as Hermes and to the Romans as Mercury. Christ working miracles. Brahma, the Creator.",
+  "questions_to_ask": [
     "What am I empowered to do?",
     "How might my abilities come into play?",
     "To what extent am I making the most of my talents?"

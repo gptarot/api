@@ -1,9 +1,9 @@
 # === Virtual Environments & Caches ===
+uv.lock
 .python-version
 .venv
 .streamlit
 .github
-samples/
 env/
 venv/
 ENV/

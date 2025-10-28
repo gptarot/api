@@ -1,12 +1,12 @@
-# GPTarot - Documentation
+# Tarotpedia - Documentation
 
 <p align="center">
 <img width=100 src='/docs/assets/icon.png'>
 </p>
 
-GPTarot is a numerology and Tarot reader powered by AI. It can help you to get tarot interpretations and numerology meanings.
+Tarotpedia is a numerology and Tarot reader powered by AI. It can help you to get tarot interpretations and numerology meanings.
 
-This documentation will guide you through the process of using the GPTarot API.
+This documentation will guide you through the process of using the Tarotpedia API.
 
 ## API Reference
 

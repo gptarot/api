@@ -31,12 +31,12 @@
       "Behaving inappropriately"
     ]
   },
-  "Archetype": "The Divine Madman",
-  "Hebrew Alphabet": "Aleph/Ox/1",
-  "Numerology": "0 (off the scale; pure potential)",
-  "Elemental": "Air",
-  "Mythical/Spiritual": "Adam before the fall. Christ as a wandering holy madman. Deity wrapped in human flesh. The Holy Spirit.",
-  "Questions to Ask": [
+  "archetype": "The Divine Madman",
+  "hebrew_alphabet": "Aleph/Ox/1",
+  "numerology": "0 (off the scale; pure potential)",
+  "elemental": "Air",
+  "mythical_spiritual": "Adam before the fall. Christ as a wandering holy madman. Deity wrapped in human flesh. The Holy Spirit.",
+  "questions_to_ask": [
     "What would I do if I felt free to take a leap?",
     "How willing am I to be vulnerable and open?",
     "How might past experiences help in this new situation?"

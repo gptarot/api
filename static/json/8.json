@@ -26,12 +26,12 @@
       "Failing to rein in impulsive behavior"
     ]
   },
-  "Archetype": "The Victorious Hero",
-  "Hebrew Alphabet": "Cheth/Fence/8",
-  "Numerology": "7 (imagination, inner work, psychology)",
-  "Elemental": "Cancer",
-  "Mythical/Spiritual": "Odysseus. Jason. The search for the Holy Grail. Christ's triumphal entry into Jerusalem.",
-  "Questions to Ask": [
+  "archetype": "The Victorious Hero",
+  "hebrew_alphabet": "Cheth/Fence/8",
+  "numerology": "7 (imagination, inner work, psychology)",
+  "elemental": "Cancer",
+  "mythical_spiritual": "Odysseus. Jason. The search for the Holy Grail. Christ's triumphal entry into Jerusalem.",
+  "questions_to_ask": [
     "To what extent have I arrived? What will my next challenge be?",
     "How can I use past achievements to their best advantage?",
     "What would the criteria for real and meaningful success be?"

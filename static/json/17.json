@@ -34,12 +34,12 @@
       "Maliciously engaging in destructive behavior"
     ]
   },
-  "Archetype": "The Shattered Ego",
-  "Hebrew Alphabet": "Pe[as]/Open Mouth/80",
-  "Numerology": "16 = 1 + 6 = 7 (psychology, imagination, inner work)",
-  "Elemental": "Mars",
-  "Mythical/Spiritual": "The Tower of Babel. The destruction of Sodom and Gomorrah. Shiva's destructive dance. The lightning of Zeus and Thor.",
-  "Questions to Ask": [
+  "archetype": "The Shattered Ego",
+  "hebrew_alphabet": "Pe[as]/Open Mouth/80",
+  "numerology": "16 = 1 + 6 = 7 (psychology, imagination, inner work)",
+  "elemental": "Mars",
+  "mythical_spiritual": "The Tower of Babel. The destruction of Sodom and Gomorrah. Shiva's destructive dance. The lightning of Zeus and Thor.",
+  "questions_to_ask": [
     "How might the current situation dramatically alter my perspective?",
     "How might this loss open the door for new growth?",
     "What attitudes need to be struck down before I proceed?"

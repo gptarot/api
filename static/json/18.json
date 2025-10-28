@@ -35,12 +35,12 @@
       "Spreading pessimism and stinginess of spirit"
     ]
   },
-  "Archetype": "The Heavenly Guide",
-  "Hebrew Alphabet": "Tzaddi/Fishhook/90 or, in some decks, He[as]/Window/5",
-  "Numerology": "17 = 1 + 7 = 8 (action, movement, swiftness)",
-  "Elemental": "Aquarius",
-  "Mythical/Spiritual": "The star that guided the Magi. Aphrodite. Venus. The Pleiades. Moses bringing forth water from the rock.",
-  "Questions to Ask": [
+  "archetype": "The Heavenly Guide",
+  "hebrew_alphabet": "Tzaddi/Fishhook/90 or, in some decks, He[as]/Window/5",
+  "numerology": "17 = 1 + 7 = 8 (action, movement, swiftness)",
+  "elemental": "Aquarius",
+  "mythical_spiritual": "The star that guided the Magi. Aphrodite. Venus. The Pleiades. Moses bringing forth water from the rock.",
+  "questions_to_ask": [
     "What would my higher power direct me to do?",
     "How can I be less self-conscious and guarded?",
     "How can I better attune myself to the abundance of life's blessings?"

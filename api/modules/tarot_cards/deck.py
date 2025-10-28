@@ -43,6 +43,20 @@ class TarotDeck:
                 cards.append(card_info)
         return cards
 
+    def get_card_info(self, card_number: int) -> Dict[str, Any]:
+        """Load a specific card info file by number."""
+        file_path = self._card_dir() / f"{card_number}.json"
+        if not file_path.exists():
+            raise ValueError(f"Card file not found: {file_path}")
+
+        with open(file_path, "r", encoding="utf-8") as f:
+            card_info: dict = json.load(f)
+
+        card_info["image_url"] = f"{self.images_subpath}/{card_number}.jpg"
+
+        card_info.pop("img", None)
+        return card_info
+
     def draw(self, count: int = 10) -> List[TarotCard]:
         """Draw N shuffled tarot cards."""
         if count > len(self.cards):

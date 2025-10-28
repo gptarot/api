@@ -27,12 +27,12 @@
       "Using overt force to achieve your goals and maintain order"
     ]
   },
-  "Archetype": "The Father",
-  "Hebrew Alphabet": "He[as]/Window/5, or in some decks, Tzaddi/Fish hook/90",
-  "Numerology": "4 (stability, equality, persistence)",
-  "Elemental": "Mars/Aries",
-  "Mythical/Spiritual": "Masculine gods, including the Hebrew God, the Christian God, Allah, and Zeus. Patriarchs (Abraham) and lawgivers (Moses). Vishnu, the Preserver.",
-  "Questions to Ask": [
+  "archetype": "The Father",
+  "hebrew_alphabet": "He[as]/Window/5, or in some decks, Tzaddi/Fish hook/90",
+  "numerology": "4 (stability, equality, persistence)",
+  "elemental": "Mars/Aries",
+  "mythical_spiritual": "Masculine gods, including the Hebrew God, the Christian God, Allah, and Zeus. Patriarchs (Abraham) and lawgivers (Moses). Vishnu, the Preserver.",
+  "questions_to_ask": [
     "How does the issue of control or regulation impact this situation?",
     "What would a compassionate but strict father do?",
     "What needs more control?"

@@ -1,45 +1,37 @@
-from datetime import datetime
-from typing import List
+from typing import Dict, List, Optional
 
 from pydantic import BaseModel, field_validator
 
 from api.models.tarot import TarotCard, TarotInterpretation
 
-
-def _validate_date_string(value: str) -> str:
-    if not isinstance(value, str):
-        raise TypeError("value must be a string")
-    try:
-        datetime.strptime(value, "%Y-%m-%d")
-    except ValueError:
-        raise ValueError("date must be in format YYYY-MM-DD")
-    return value
+from .utils import validate_date_string_format
 
 
 class TarotAPIRequest(BaseModel):
     name: str
-    dob: str
     question: str
     past_card: TarotCard
     present_card: TarotCard
     future_card: TarotCard
 
-    @field_validator("dob")
-    def validate_dob_format(cls, value: str) -> str:
-        return _validate_date_string(value)
-
 
 class TarotAPIResponse(BaseModel):
-    name: str
-    dob: str
-    question: str
-    numerology_meaning: str
     interpretations: List[TarotInterpretation]
     summary: str
 
+
+class NumerologyAPIRequest(BaseModel):
+    name: str
+    dob: str
+    question: str
+
     @field_validator("dob")
     def validate_dob_format(cls, value: str) -> str:
-        return _validate_date_string(value)
+        return validate_date_string_format(value)
+
+
+class NumerologyAPIResponse(BaseModel):
+    numerology_meaning: str
 
 
 class CardsAPIRequest(BaseModel):
@@ -50,8 +42,25 @@ class CardsAPIRequest(BaseModel):
 
     @field_validator("dob")
     def validate_dob_format(cls, value: str) -> str:
-        return _validate_date_string(value)
+        return validate_date_string_format(value)
 
 
 class CardsAPIResponse(BaseModel):
     cards: List[TarotCard]
+
+
+class CardInfoAPIResponse(BaseModel):
+    name: str
+    number: str
+    arcana: str
+    suit: str
+    image_url: str
+    fortune_telling: Optional[List[str]] = None
+    keywords: Optional[List[str]] = None
+    meanings: Optional[Dict[str, List[str]]] = None
+    archetype: Optional[str] = None
+    hebrew_alphabet: Optional[str] = None
+    numerology: Optional[str] = None
+    elemental: Optional[str] = None
+    mythical_spiritual: Optional[str] = None
+    questions_to_ask: Optional[List[str]] = None

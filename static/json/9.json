@@ -30,12 +30,12 @@
       "Failing to take a stand when necessary"
     ]
   },
-  "Archetype": "The Law",
-  "Hebrew Alphabet": "Lamed/Outstretched Arms/30 or Theth/Snake/9",
-  "Numerology": "8 (movement, work) or 11 = 1 + 1 = 2 (debate, duality)",
-  "Elemental": "Libra or Leo",
-  "Mythical/Spiritual": "Themis or Justitia. Ma'at. Solomon dividing a baby. The Sword of Damocles. The giving of the Ten Commandments.",
-  "Questions to Ask": [
+  "archetype": "The Law",
+  "hebrew_alphabet": "Lamed/Outstretched Arms/30 or Theth/Snake/9",
+  "numerology": "8 (movement, work) or 11 = 1 + 1 = 2 (debate, duality)",
+  "elemental": "Libra or Leo",
+  "mythical_spiritual": "Themis or Justitia. Ma'at. Solomon dividing a baby. The Sword of Damocles. The giving of the Ten Commandments.",
+  "questions_to_ask": [
     "To what extent is your life (or work) balanced?",
     "How can you achieve greater objectivity?",
     "What course of action would be fair to everyone concerned?"

@@ -27,12 +27,12 @@
       "Ill-informed decisions"
     ]
   },
-  "Archetype": "The Lover/Sexual Awakening",
-  "Hebrew Alphabet": "Zain/Sword/7",
-  "Numerology": "6 (cooperation, collaboration, interaction)",
-  "Elemental": "Gemini",
-  "Mythical/Spiritual": "Obviously, Adam and Eve, who are depicted in RWS-influenced decks. Also Venus and Cupid, Aphrodite and Eros.",
-  "Questions to Ask": [
+  "archetype": "The Lover/Sexual Awakening",
+  "hebrew_alphabet": "Zain/Sword/7",
+  "numerology": "6 (cooperation, collaboration, interaction)",
+  "elemental": "Gemini",
+  "mythical_spiritual": "Obviously, Adam and Eve, who are depicted in RWS-influenced decks. Also Venus and Cupid, Aphrodite and Eros.",
+  "questions_to_ask": [
     "What guides my choices?",
     "What is my heart leading me to do?",
     "How might this decision transform me as a person?"

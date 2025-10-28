@@ -32,12 +32,12 @@
       "Failing to see the divine reflected in those around you"
     ]
   },
-  "Archetype": "Enlightenment",
-  "Hebrew Alphabet": "Tau/Cross/400",
-  "Numerology": "21 = 2 + 1 = 3 (expression, result)",
-  "Elemental": "Saturn",
-  "Mythical/Spiritual": "The ascended Christ. The Buddha attaining enlightenment. The alpha and the omega. The completion of the alchemist's great work.",
-  "Questions to Ask": [
+  "archetype": "Enlightenment",
+  "hebrew_alphabet": "Tau/Cross/400",
+  "numerology": "21 = 2 + 1 = 3 (expression, result)",
+  "elemental": "Saturn",
+  "mythical_spiritual": "The ascended Christ. The Buddha attaining enlightenment. The alpha and the omega. The completion of the alchemist's great work.",
+  "questions_to_ask": [
     "For me, what would having it all mean?",
     "How aware am I of my own connectedness to the world around me?",
     "What keeps me from having it all right now, today?"

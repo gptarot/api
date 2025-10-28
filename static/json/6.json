@@ -29,12 +29,12 @@
       "Restricting access to spiritual truths or the gods"
     ]
   },
-  "Archetype": "The Guardian/The Church/Faith",
-  "Hebrew Alphabet": "Vau/Nail or Spike/6",
-  "Numerology": "5 (instability, resistance, confrontation, evolution)",
-  "Elemental": "Taurus/Earth",
-  "Mythical/Spiritual": "The Christ, the Apostle Peter, Buddha, Mohammed. Popes, priests, and intercessors of every faith and tradition",
-  "Questions to Ask": [
+  "archetype": "The Guardian/The Church/Faith",
+  "hebrew_alphabet": "Vau/Nail or Spike/6",
+  "numerology": "5 (instability, resistance, confrontation, evolution)",
+  "elemental": "Taurus/Earth",
+  "mythical_spiritual": "The Christ, the Apostle Peter, Buddha, Mohammed. Popes, priests, and intercessors of every faith and tradition",
+  "questions_to_ask": [
     "What role might tradition or religion play in this situation?",
     "Who authored the rules? Who enforces them? Why?",
     "How might an experienced guide impact this situation?"

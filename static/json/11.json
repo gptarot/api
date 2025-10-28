@@ -25,12 +25,12 @@
       "Fighting the natural course of events"
     ]
   },
-  "Archetype": "The Fates/Destiny",
-  "Hebrew Alphabet": "Koph/Palm/20",
-  "Numerology": "10 (finality, completion) and 10 = 1 + 0 = 1 (seed, opportunity)",
-  "Elemental": "Jupiter",
-  "Mythical/Spiritual": "The God in the Machine. Deus ex Machina. Clotho, Lachesis, and Atropos. Fortuna.",
-  "Questions to Ask": [
+  "archetype": "The Fates/Destiny",
+  "hebrew_alphabet": "Koph/Palm/20",
+  "numerology": "10 (finality, completion) and 10 = 1 + 0 = 1 (seed, opportunity)",
+  "elemental": "Jupiter",
+  "mythical_spiritual": "The God in the Machine. Deus ex Machina. Clotho, Lachesis, and Atropos. Fortuna.",
+  "questions_to_ask": [
     "How does this challenge fit into a larger pattern?",
     "What role does luck play in my circumstances?",
     "What can I control? How should I know when to relinquish control?"

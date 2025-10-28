@@ -26,12 +26,12 @@
       "Hiding your skills and talents out of fear of unworthiness"
     ]
   },
-  "Archetype": "The Holy Man",
-  "Hebrew Alphabet": "Yod/Hand/10",
-  "Numerology": "9 (fullness, readiness, ripeness)",
-  "Elemental": "Virgo",
-  "Mythical/Spiritual": "The Christ, while fasting 40 days in the wilderness. Chronos, the god of time. Father Time. Hermes.",
-  "Questions to Ask": [
+  "archetype": "The Holy Man",
+  "hebrew_alphabet": "Yod/Hand/10",
+  "numerology": "9 (fullness, readiness, ripeness)",
+  "elemental": "Virgo",
+  "mythical_spiritual": "The Christ, while fasting 40 days in the wilderness. Chronos, the god of time. Father Time. Hermes.",
+  "questions_to_ask": [
     "What would happen if I simply withdrew and took no action?",
     "How can I get some perspective on the situation?",
     "Who has walked this path before me? How can I enlist his or her help?"

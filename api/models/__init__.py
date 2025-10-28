@@ -1,4 +1,12 @@
-from .api import CardsAPIRequest, CardsAPIResponse, TarotAPIRequest, TarotAPIResponse
+from .api import (
+    CardInfoAPIResponse,
+    CardsAPIRequest,
+    CardsAPIResponse,
+    NumerologyAPIRequest,
+    NumerologyAPIResponse,
+    TarotAPIRequest,
+    TarotAPIResponse,
+)
 from .llm import TarotLLMResponse
 from .tarot import TarotCard, TarotInterpretation
 
@@ -10,4 +18,7 @@ __all__ = [
     "TarotCard",
     "TarotInterpretation",
     "TarotLLMResponse",
+    "NumerologyAPIRequest",
+    "NumerologyAPIResponse",
+    "CardInfoAPIResponse",
 ]

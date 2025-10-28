@@ -32,12 +32,12 @@
       "Profiting at the expense of others"
     ]
   },
-  "Archetype": "The Traitor",
-  "Hebrew Alphabet": "Mem/Water/40",
-  "Numerology": "12 = 1 + 2 = 3 (expression, productivity, output)",
-  "Elemental": "Water",
-  "Mythical/Spiritual": "The Crucified Christ. Isaac as a sacrifice. Prometheus bound. Jonah and the whale. Lazarus. Any hanged or sacrificed god. Judas.",
-  "Questions to Ask": [
+  "archetype": "The Traitor",
+  "hebrew_alphabet": "Mem/Water/40",
+  "numerology": "12 = 1 + 2 = 3 (expression, productivity, output)",
+  "elemental": "Water",
+  "mythical_spiritual": "The Crucified Christ. Isaac as a sacrifice. Prometheus bound. Jonah and the whale. Lazarus. Any hanged or sacrificed god. Judas.",
+  "questions_to_ask": [
     "How can I radically alter my perspective?",
     "How might being stuck actually be a blessing in disguise?",
     "How can I help myself see the glass as half full?"

@@ -27,12 +27,12 @@
       "Playing favorites"
     ]
   },
-  "Archetype": "The Id",
-  "Hebrew Alphabet": "Theth/Snake/9 or Lamed/Outstretched Arms/30",
-  "Numerology": "11 = 1 + 1 = 2 (debate, duality) or 8 (movement, outer work)",
-  "Elemental": "Leo or Libra",
-  "Mythical/Spiritual": "Samson. Hercules. Daniel in the lion's den. The sinless Christ.",
-  "Questions to Ask": [
+  "archetype": "The Id",
+  "hebrew_alphabet": "Theth/Snake/9 or Lamed/Outstretched Arms/30",
+  "numerology": "11 = 1 + 1 = 2 (debate, duality) or 8 (movement, outer work)",
+  "elemental": "Leo or Libra",
+  "mythical_spiritual": "Samson. Hercules. Daniel in the lion's den. The sinless Christ.",
+  "questions_to_ask": [
     "How can I enhance my self-discipline?",
     "What behaviors tempt me? How can I resist?",
     "What instincts do I continue to struggle with today?"
