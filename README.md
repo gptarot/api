@@ -1,7 +1,9 @@
-# Tarotpedia - A numerology and Tarot reader powered by AI
+# TAROTPEDIA
 
-<p align="center" style="background-color:white;">
-<img width=100 src='./docs/assets/icon.png'>
+> TAROTPEDIA is a numerology and Tarot reader powered by AI.
+
+<p align="center">
+<img width='full' src='./docs/assets/banner.png'>
 </p>
 
 ## Development
@@ -33,27 +35,6 @@
 This API documentation is generated using [mkdocs-material](https://squidfunk.github.io/mkdocs-material/) and [mkdocstrings](https://github.com/mkdocstrings/mkdocstrings) for docs-as-code.
 
 In your codebase, you can add the `mkdocs` markdown below the Python `class`, `func`,...
-
-```python
-@app.post("/predict/interpretations", response_model=TarotAPIResponse)
-async def predict_interpretations(request: TarotAPIRequest) -> TarotAPIResponse:
-    """
-    | Method | Path                       | Description                                       |
-    | ------ | -------------------------- | ------------------------------------------------- |
-    | POST   | `/predict/interpretations` | Get tarot interpretations and numerology meanings |
-
-    Params:
-        request (TarotAPIRequest): The request object containing the name, dob, question, past_card, present_card, and future_card.
-
-    Returns:
-        TarotAPIResponse: The response object containing the name, dob, question, numerology_meaning, and interpretations.
-
-    !!! note
-        This function uses the `get_gptarot_final_interpretations` and `get_numerology_meaning` functions to get the tarot interpretations and numerology meanings.
-   ...
-   """
-   pass
-```
 
 A markdown file is need to reference to the function with syntax `::: {path_to_python_file}.{function_name}`. Then `mkdocs` will generate the API documentation for you.
 

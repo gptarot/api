@@ -11,7 +11,7 @@ borderColor = "#d3d2ca"
 showWidgetBorder = true
 baseRadius = "0.75rem"
 buttonRadius = "full"
-font = "Nunito:https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+font = "Caudex:https://fonts.googleapis.com/css2?family=Caudex&display=swap"
 headingFontWeights = [600,500,500,500,500,500]
 headingFontSizes = ["3rem", "2rem"]
 codeBackgroundColor = "#ecebe4"
