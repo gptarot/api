@@ -1,16 +1,17 @@
+import os
 from datetime import datetime
 
 import requests  # type: ignore
 import streamlit as st
 
-API_URL = "http://0.0.0.0:8000"
+BASE_API_URL = os.getenv("BASE_API_URL", "http://0.0.0.0:8000")
 
 
 def draw_three_cards(name: str, dob: str):
     payload = {"name": name, "dob": dob, "count": 3, "follow_numerology": False}
     try:
         r = requests.post(
-            f"{API_URL}/tarot-cards/draw",
+            f"{BASE_API_URL}/tarot-cards/draw",
             headers={"accept": "application/json", "Content-Type": "application/json"},
             json=payload,
             timeout=30,
@@ -59,7 +60,7 @@ def get_tarot_and_numerology(name: str, dob: str, question: str):
     status.text("✨ Interpreting tarot reading...")
     try:
         r = requests.post(
-            f"{API_URL}/predict/tarot-interpretations",
+            f"{BASE_API_URL}/predict/tarot-interpretations",
             headers={"accept": "application/json", "Content-Type": "application/json"},
             json=payload_tarot,
             timeout=60,
@@ -77,7 +78,7 @@ def get_tarot_and_numerology(name: str, dob: str, question: str):
     status.text("🔢 Calculating numerology insights...")
     try:
         r2 = requests.post(
-            f"{API_URL}/predict/numerology-interpretations",
+            f"{BASE_API_URL}/predict/numerology-interpretations",
             headers={"accept": "application/json", "Content-Type": "application/json"},
             json={"name": name, "dob": dob, "question": question},
             timeout=30,
@@ -104,7 +105,7 @@ def display_card(card_data: dict, interpretation: dict):
         st.markdown(
             f"""
             <div style="text-align:center;">
-                <img src="{API_URL}{card_data["image_url"]}" style="width:200px;{rotation}">
+                <img src="{BASE_API_URL}{card_data["image_url"]}" style="width:200px;{rotation}">
                 <p style="margin-top:10px;font-size:14px;color:#666;">
                     {card_data["name"]} {"(Reversed)" if is_reversed else "(Upright)"}
                 </p>

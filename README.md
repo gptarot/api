@@ -3,7 +3,7 @@
 > TAROTPEDIA is a numerology and Tarot reader powered by AI.
 
 <p align="center">
-<img width='full' src='./docs/assets/banner.png'>
+<img width=100% src='./docs/assets/banner.png'>
 </p>
 
 ## Development
