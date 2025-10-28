@@ -3,7 +3,7 @@ from typing import List
 
 from pydantic import BaseModel, field_validator
 
-from gptarot.models.tarot import TarotCard, TarotInterpretation
+from api.models.tarot import TarotCard, TarotInterpretation
 
 
 def _validate_date_string(value: str) -> str:

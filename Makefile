@@ -11,7 +11,7 @@ docs-dev: .install-uv
 	@uv run mkdocs serve --watch .
 
 api: .install-uv
-	@uv run uvicorn src.gptarot.index:app --reload --reload-dir src
+	@uv run uvicorn api.index:app --reload --reload-dir api
 
 ui: .install-uv
-	@uv run streamlit run src/gptarot/inference.py
+	@uv run streamlit run api/inference.py

@@ -1,3 +1,5 @@
+name: pre-commit
+
 on:
   pull_request:
     branches: [main, master]
@@ -5,7 +7,7 @@ on:
     branches: [main, master]
 
 jobs:
-  uv-pre-commit:
+  pre-commit:
     name: test - pre-commit
     runs-on: ubuntu-latest
     env:

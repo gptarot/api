@@ -1,34 +1,35 @@
 import logging
+import os
 from pathlib import Path
 
 import uvicorn
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import RedirectResponse
 from fastapi.staticfiles import StaticFiles
-from mkdocs import config
-from mkdocs.commands import build as mkdocs_build
 
-from gptarot import __title__, __version__
-from gptarot.models import CardsAPIRequest, CardsAPIResponse, TarotAPIRequest, TarotAPIResponse
-from gptarot.modules import NumerologyReader, TarotDeck, TarotReader
+from api import __title__, __version__
+from api.models import CardsAPIRequest, CardsAPIResponse, TarotAPIRequest, TarotAPIResponse
+from api.modules import NumerologyReader, TarotDeck, TarotReader
 
 logger = logging.getLogger(__name__)
-MKDOCS_SITE_DIR = Path(__file__).resolve().parents[2] / "site"
-CARD_IMAGES_DIR = Path(__file__).resolve().parents[2] / "public" / "images"
+PROJECT_BASE_DIR = Path(__file__).resolve().parents[1]
 NUMEROLOGY_READER = NumerologyReader()
 TAROT_READER = TarotReader()
 
-mkdocs_conf = config.load_config(site_dir=MKDOCS_SITE_DIR.as_posix(), config_file="mkdocs.yaml")
-mkdocs_build.build(mkdocs_conf)
 
 app = FastAPI(title=__title__, version=__version__, docs_url="/swagger", redoc_url=None)
-app.mount("/docs", StaticFiles(directory=MKDOCS_SITE_DIR, html=True), name="docs")
-app.mount("/tarot-cards/images", StaticFiles(directory=CARD_IMAGES_DIR), name="tarot-cards")
+app.mount("/tarot-cards/images", StaticFiles(directory=PROJECT_BASE_DIR / "static" / "images"), name="tarot-cards")
 
+if os.getenv("VERCEL") == "1":
 
-@app.get("/", include_in_schema=False)
-async def redirect_to_docs():
-    return RedirectResponse(url="/docs")
+    @app.get("/favicon.ico", include_in_schema=False)
+    async def favicon():
+        return RedirectResponse("/vercel.svg", status_code=307)
+
+    @app.get("/", include_in_schema=False)
+    @app.get("/docs", include_in_schema=False)
+    async def docs():
+        return RedirectResponse("https://tarotpedia.github.io/docs", status_code=307)
 
 
 @app.post("/predict/interpretations", response_model=TarotAPIResponse, tags=["Predict API"])

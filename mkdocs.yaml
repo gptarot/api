@@ -1,5 +1,6 @@
 site_name: GPTarot - API Documentation
 site_description: API Documentation for GPTarot FastAPI Project
+docs_dir: docs
 repo_url: https://github.com/gptarot/gptarot.api/
 
 nav:
@@ -36,7 +37,7 @@ plugins:
       handlers:
         python:
           paths:
-            - src/gptarot
+            - api
           options:
             # https://mkdocstrings.github.io/python/usage/configuration/general/
             show_bases: false

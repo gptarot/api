@@ -6,8 +6,8 @@ import openai
 from fastapi import HTTPException
 from unidecode import unidecode
 
-from gptarot.llm import MODEL_LISTS, OPENAI_BASE_CLIENT
-from gptarot.prompts.numerology import SYSTEM_PROMPT
+from api.llm import MODEL_LISTS, OPENAI_BASE_CLIENT
+from api.prompts.numerology import SYSTEM_PROMPT
 
 logger = logging.getLogger(__name__)
 

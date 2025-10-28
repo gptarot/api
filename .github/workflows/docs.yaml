@@ -1,0 +1,31 @@
+name: deploy-docs
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-docs:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
+
+      - run: curl -LsSf https://astral.sh/uv/install.sh | sh
+      - run: uv sync --all-groups --all-extras
+
+      - name: Deploy docs to tarotpedia/docs
+        run: |
+          git remote add deploy "https://${{ secrets.DOCS_DEPLOY_USER }}:${{ secrets.DOCS_DEPLOY_TOKEN }}@github.com/tarotpedia/docs.git"
+          uv run mkdocs gh-deploy --force --remote-name deploy

@@ -3,13 +3,13 @@ import random
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-from gptarot.models import TarotCard
+from api.models import TarotCard
 
 
 class TarotDeck:
     """Draw tarot cards."""
 
-    base_dir: Path = Path(__file__).resolve().parents[4] / "public"
+    base_dir: Path = Path(__file__).resolve().parents[3] / "static"
     cards_subdir: str = "json"
     images_subpath: str = "/tarot-cards/images"
 
@@ -18,7 +18,9 @@ class TarotDeck:
         self.cards: List[Dict[str, Any]] = self._load_cards()
 
     @classmethod
-    def configure(cls, base_dir: Optional[Path] = None, cards_subdir: Optional[str] = None, images_subpath: Optional[str] = None) -> None:
+    def configure(
+        cls, base_dir: Optional[Path] = None, cards_subdir: Optional[str] = None, images_subpath: Optional[str] = None
+    ) -> None:
         """Change configuration at class level."""
         if base_dir:
             cls.base_dir = Path(base_dir)

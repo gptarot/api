@@ -5,9 +5,9 @@ from typing import Any, List, Optional, Tuple
 import instructor
 from fastapi import HTTPException
 
-from gptarot.llm import OPENAI_CLIENT
-from gptarot.models import TarotCard, TarotInterpretation, TarotLLMResponse
-from gptarot.prompts.tarot import SYSTEM_PROMPT
+from api.llm import OPENAI_CLIENT
+from api.models import TarotCard, TarotInterpretation, TarotLLMResponse
+from api.prompts.tarot import SYSTEM_PROMPT
 
 logger = logging.getLogger(__name__)
 
@@ -18,10 +18,7 @@ class TarotReader:
     """
 
     client: instructor.AsyncInstructor = OPENAI_CLIENT
-    models: list[str] = [
-        "openai/gpt-oss-120b",
-        "openai/gpt-oss-20b"
-    ]
+    models: list[str] = ["openai/gpt-oss-120b", "openai/gpt-oss-20b"]
 
     @classmethod
     def configure(
@@ -39,7 +36,6 @@ class TarotReader:
     def _build_system_prompt(cls) -> str:
         """System prompt template for Tarot card interpretation."""
         return SYSTEM_PROMPT
-
 
     @classmethod
     async def interpret_cards(

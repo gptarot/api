@@ -16,6 +16,12 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+dev = [
+    "streamlit==1.50.0",
+    "pre-commit==4.3.0",
+    "ruff==0.14.1"
+]
+
 docs = [
     "griffe-pydantic==1.1.8",
     "mkdocs-material==9.6.22",
@@ -32,22 +38,14 @@ line-length = 120
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
-[dependency-groups]
-dev = [
-    "gradio>=5.23.1",
-    "pre-commit==4.3.0",
-    "ruff==0.14.1",
-    "streamlit>=1.50.0",
-]
-
 [tool.hatch.build.targets.wheel]
-packages = ["src/gptarot"]
+packages = ["api"]
 
 [tool.hatch.build.targets.sdist]
-packages = ["src/gptarot"]
+packages = ["api"]
 
 [tool.hatch.version]
-path = "src/gptarot/__init__.py"
+path = "api/__init__.py"
 
 [tool.pycodestyle]
 convention = "google"
